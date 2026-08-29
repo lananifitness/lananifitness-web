@@ -1,0 +1,85 @@
+.section {
+  padding: var(--space-6) 0;
+}
+
+.header {
+  max-width: 760px;
+  margin-bottom: var(--space-5);
+}
+
+.eyebrow {
+  font-weight: 700;
+  color: var(--color-pink);
+  font-size: 18px;
+  margin-bottom: var(--space-1);
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  color: var(--color-ink-soft);
+  margin-top: var(--space-2);
+}
+
+.valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.valor {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-soft);
+}
+
+.valor svg {
+  color: var(--color-pink);
+  margin-bottom: var(--space-1);
+}
+
+.valor h3 {
+  font-size: 21px;
+  margin-bottom: 6px;
+}
+
+.valor p {
+  color: var(--color-ink-soft);
+  font-size: 16px;
+}
+
+.testimonios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3);
+}
+
+.cita {
+  margin: 0;
+  background: var(--color-white);
+  border-left: 6px solid var(--color-orange);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-soft);
+}
+
+.cita p {
+  font-size: 19px;
+  color: var(--color-ink);
+  font-style: italic;
+}
+
+.cita footer {
+  margin-top: var(--space-2);
+  font-size: 15px;
+  color: var(--color-ink-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.logro {
+  color: var(--color-pink);
+  font-weight: 600;
+}

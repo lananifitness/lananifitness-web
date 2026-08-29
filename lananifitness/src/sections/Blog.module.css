@@ -1,0 +1,83 @@
+.section {
+  padding: var(--space-6) 0;
+}
+
+.header {
+  max-width: 720px;
+  margin-bottom: var(--space-5);
+}
+
+.eyebrow {
+  font-weight: 700;
+  color: var(--color-pink);
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3);
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.categoria {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(240, 122, 48, 0.14);
+  color: var(--color-orange);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.card h3 {
+  font-size: 22px;
+}
+
+.resumen {
+  color: var(--color-ink-soft);
+  font-size: 16px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-ink-soft);
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.lectura {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.leer {
+  color: var(--color-pink);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.verMas {
+  text-align: center;
+  margin-top: var(--space-4);
+}
+
+.verMas a {
+  font-weight: 700;
+  color: var(--color-pink);
+  text-decoration: none;
+  font-size: 18px;
+}

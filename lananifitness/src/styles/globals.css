@@ -1,0 +1,142 @@
+:root {
+  /* Marca — La Nani Fitness */
+  --color-pink: #e8305a;
+  --color-pink-light: #e8417a;
+  --color-orange: #f07a30;
+  --color-orange-light: #f0834a;
+  --color-cream: #fff8f5;
+  --color-ink: #331521;
+  --color-ink-soft: #5c3a48;
+  --color-white: #ffffff;
+  --color-line: #f0d9d0;
+
+  --gradient-brand: linear-gradient(120deg, var(--color-pink) 0%, var(--color-orange) 100%);
+
+  --font-display: 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Tipografía accesible para +60: base grande, escala generosa */
+  --fs-body: 19px;
+  --fs-lead: 22px;
+  --fs-h3: 26px;
+  --fs-h2: 36px;
+  --fs-h1: 52px;
+  --fs-hero: clamp(40px, 6vw, 76px);
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+  --space-5: 64px;
+  --space-6: 96px;
+
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 12px 32px rgba(232, 48, 90, 0.12);
+  --shadow-lift: 0 20px 48px rgba(232, 48, 90, 0.18);
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--color-ink);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* Foco de teclado visible, siempre */
+:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Animación de aparición controlada por useReveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
