@@ -31,15 +31,29 @@
   background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: var(--space-4);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-card-rest);
   border: 2px solid transparent;
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-soft);
 }
 
 .cardDestacado {
-  border-color: var(--color-orange);
+  background:
+    linear-gradient(var(--color-white), var(--color-white)) padding-box,
+    var(--gradient-brand) border-box;
+  border: 2px solid transparent;
+  box-shadow: var(--shadow-soft);
+}
+
+.cardDestacado:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-3px);
 }
 
 .badge {
@@ -85,6 +99,45 @@
   color: var(--color-orange);
   flex-shrink: 0;
   margin-top: 2px;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-line);
+  flex-wrap: wrap;
+}
+
+.precio {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.duracion {
+  color: var(--color-ink-soft);
+  font-size: 16px;
+}
+
+.cta {
+  background: var(--gradient-brand);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cta:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
 }
 
 .diasAcordeon {
@@ -140,43 +193,6 @@
   font-weight: 700;
   color: var(--color-orange);
   white-space: nowrap;
-}
-
-.footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2);
-  padding-top: var(--space-2);
-  border-top: 1px solid var(--color-line);
-  flex-wrap: wrap;
-}
-
-.precio {
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--color-ink);
-}
-
-.duracion {
-  color: var(--color-ink-soft);
-  font-size: 16px;
-}
-
-.cta {
-  background: var(--gradient-brand);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 14px 24px;
-  border-radius: var(--radius-pill);
-  white-space: nowrap;
-}
-
-.cta:hover {
-  box-shadow: var(--shadow-lift);
 }
 
 .verMas {
