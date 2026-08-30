@@ -87,6 +87,61 @@
   margin-top: 2px;
 }
 
+.diasAcordeon {
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-2);
+}
+
+.diasAcordeon summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--color-pink);
+  font-size: 15px;
+  list-style: none;
+}
+
+.diasAcordeon summary::-webkit-details-marker {
+  display: none;
+}
+
+.diasAcordeon[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.diasAcordeon summary svg {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.diasLista {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.diasLista li {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-ink-soft);
+  line-height: 1.4;
+}
+
+.diaNumero {
+  flex-shrink: 0;
+  font-weight: 700;
+  color: var(--color-orange);
+  white-space: nowrap;
+}
+
 .footer {
   margin-top: auto;
   display: flex;
@@ -122,10 +177,6 @@
 
 .cta:hover {
   box-shadow: var(--shadow-lift);
-}
-
-.paypalWrap {
-  min-width: 200px;
 }
 
 .verMas {

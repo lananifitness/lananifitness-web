@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ChevronDown } from 'lucide-react';
 import { RETOS } from '../data';
 import { useReveal } from '../hooks/useReveal';
 import styles from './Retos.module.css';
@@ -49,14 +49,42 @@ export default function Retos({ variant = 'full' }: Props) {
                 ))}
               </ul>
 
+              {reto.diasIncluidos && (
+                <details className={styles.diasAcordeon}>
+                  <summary>
+                    Ver los {reto.diasIncluidos.length} días del reto
+                    <ChevronDown size={18} />
+                  </summary>
+                  <ol className={styles.diasLista}>
+                    {reto.diasIncluidos.map((dia) => (
+                      <li key={dia.dia}>
+                        <span className={styles.diaNumero}>Día {dia.dia}</span>
+                        <span>{dia.titulo}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </details>
+              )}
+
               <div className={styles.footer}>
                 <div>
                   <span className={styles.precio}>{reto.precio.toFixed(2)}€</span>
                   <span className={styles.duracion}> · {reto.duracionDias} días</span>
                 </div>
-                <Link to="/contacto" className={styles.cta}>
-                  Quiero este reto
-                </Link>
+                {reto.paypalLink ? (
+                  <a
+                    href={reto.paypalLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.cta}
+                  >
+                    Quiero este reto
+                  </a>
+                ) : (
+                  <Link to="/contacto" className={styles.cta}>
+                    Quiero este reto
+                  </Link>
+                )}
               </div>
             </article>
           ))}

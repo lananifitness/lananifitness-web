@@ -60,6 +60,30 @@ export const VALORES: Valor[] = [
   },
 ];
 
+export const VIDEOS_RETO_VUELVO_A_MOVERME: VideoDia[] = [
+  { dia: 1, titulo: 'Camina en casa, no hay excusas', youtubeId: 'mPYcX6I65Jc' },
+  { dia: 2, titulo: 'Equilibrio y evita caídas', youtubeId: 'SPMMnvdbnCM' },
+  { dia: 3, titulo: 'Hombros, brazos y espalda', youtubeId: 'j5K9KKFcAtE' },
+  { dia: 4, titulo: 'Fortalece tus rodillas en silla', youtubeId: 'Qj_5I1VilR4' },
+  { dia: 5, titulo: 'Abdominales en silla', youtubeId: '_i4ni1dCl34' },
+  { dia: 6, titulo: 'Ejercicio de rodillas en silla', youtubeId: 'dGrerdSBvfs' },
+  { dia: 7, titulo: 'Brazos sin pesas en silla', youtubeId: 'u99KSvg-IQ4' },
+  { dia: 8, titulo: 'Piernas con ligas', youtubeId: 'g7JKPdbY6tY' },
+  { dia: 9, titulo: 'Brazos con ligas', youtubeId: '84f7HDnG1a8' },
+  { dia: 10, titulo: 'Caderas y artrosis', youtubeId: 'u6kBXpifdhg' },
+  { dia: 11, titulo: 'Pies, tobillos y pantorrillas', youtubeId: 'NTXhUWqCbRA' },
+  { dia: 12, titulo: 'Cardio de bajo impacto, activa todo tu cuerpo', youtubeId: 'wLuPz-jGi9E' },
+  { dia: 13, titulo: 'Sentadillas para piernas y glúteos', youtubeId: 'PjEAY7Ob8Ho' },
+  { dia: 14, titulo: 'Baja el cortisol y reduce el estrés', youtubeId: 'lK2IavJXyKQ' },
+  { dia: 15, titulo: 'Potencia tus músculos con pesa rusa', youtubeId: 'hUIElpm9hv4' },
+  { dia: 16, titulo: 'Gana músculo en piernas', youtubeId: 'YxdlTs9GCwc' },
+  { dia: 17, titulo: 'Bíceps y tríceps con pesas', youtubeId: '9Z9KbiwFNY4' },
+  { dia: 18, titulo: 'Gana músculo en piernas (parte 2)', youtubeId: '6gHY_-Re9eg' },
+  { dia: 19, titulo: 'Fortalece brazos y espalda', youtubeId: 'nOexcdOyowc' },
+  { dia: 20, titulo: 'Abdomen bajo', youtubeId: 'arjK4pQvRxU' },
+  { dia: 21, titulo: 'Brazos y abdomen en pared', youtubeId: 'Z4w8Xm0mz-E' },
+];
+
 export const RETOS: Reto[] = [
   {
     id: 'r1',
@@ -73,24 +97,10 @@ export const RETOS: Reto[] = [
       'Rutinas de 15-20 minutos, sin salir de casa',
       'Ejercicios para fortalecer piernas y mejorar el equilibrio',
       'Acompañamiento diario conmigo, paso a paso',
-      'Grupo privado para animarte con otras mujeres del reto',
     ],
     destacado: true,
-    paypalHostedButtonId: 'KDUFFVP6REGVL',
-  },
-  {
-    id: 'r2',
-    slug: 'energia-de-vuelta',
-    nombre: 'Energía de Vuelta',
-    duracionDias: 14,
-    precio: 14.99,
-    nivel: 'todos los niveles',
-    problema: 'Cansancio constante y falta de motivación para moverte',
-    beneficios: [
-      'Rutinas cortas para activar el cuerpo sin agotarte',
-      'Consejos de descanso y respiración',
-      'Seguimiento de tu progreso día a día',
-    ],
+    paypalLink: 'https://www.paypal.com/ncp/payment/KDUFFVP6REGVL',
+    diasIncluidos: VIDEOS_RETO_VUELVO_A_MOVERME,
   },
 ];
 
@@ -189,30 +199,6 @@ export const BLOG_POSTS: PostBlog[] = [
       'Si te sientes sola hoy, ven a moverte conmigo. Aquí siempre hay un lugar para ti.',
     ],
   },
-];
-
-export const VIDEOS_RETO_VUELVO_A_MOVERME: VideoDia[] = [
-  { dia: 1, titulo: 'Camina en casa, no hay excusas', youtubeId: 'mPYcX6I65Jc' },
-  { dia: 2, titulo: 'Equilibrio y evita caídas', youtubeId: 'SPMMnvdbnCM' },
-  { dia: 3, titulo: 'Hombros, brazos y espalda', youtubeId: 'j5K9KKFcAtE' },
-  { dia: 4, titulo: 'Fortalece tus rodillas en silla', youtubeId: 'Qj_5I1VilR4' },
-  { dia: 5, titulo: 'Abdominales en silla', youtubeId: '_i4ni1dCl34' },
-  { dia: 6, titulo: 'Ejercicio de rodillas en silla', youtubeId: 'dGrerdSBvfs' },
-  { dia: 7, titulo: 'Brazos sin pesas en silla', youtubeId: 'u99KSvg-IQ4' },
-  { dia: 8, titulo: 'Piernas con ligas', youtubeId: 'g7JKPdbY6tY' },
-  { dia: 9, titulo: 'Brazos con ligas', youtubeId: '84f7HDnG1a8' },
-  { dia: 10, titulo: 'Caderas y artrosis', youtubeId: 'u6kBXpifdhg' },
-  { dia: 11, titulo: 'Pies, tobillos y pantorrillas', youtubeId: 'NTXhUWqCbRA' },
-  { dia: 12, titulo: 'Cardio de bajo impacto, activa todo tu cuerpo', youtubeId: 'wLuPz-jGi9E' },
-  { dia: 13, titulo: 'Sentadillas para piernas y glúteos', youtubeId: 'PjEAY7Ob8Ho' },
-  { dia: 14, titulo: 'Baja el cortisol y reduce el estrés', youtubeId: 'lK2IavJXyKQ' },
-  { dia: 15, titulo: 'Potencia tus músculos con pesa rusa', youtubeId: 'hUIElpm9hv4' },
-  { dia: 16, titulo: 'Gana músculo en piernas', youtubeId: 'YxdlTs9GCwc' },
-  { dia: 17, titulo: 'Bíceps y tríceps con pesas', youtubeId: '9Z9KbiwFNY4' },
-  { dia: 18, titulo: 'Gana músculo en piernas (parte 2)', youtubeId: '6gHY_-Re9eg' },
-  { dia: 19, titulo: 'Fortalece brazos y espalda', youtubeId: 'nOexcdOyowc' },
-  { dia: 20, titulo: 'Abdomen bajo', youtubeId: 'arjK4pQvRxU' },
-  { dia: 21, titulo: 'Brazos y abdomen en pared', youtubeId: 'Z4w8Xm0mz-E' },
 ];
 
 export const SEO_PAGINAS: Record<string, SeoMeta> = {
