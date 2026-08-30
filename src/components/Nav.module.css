@@ -18,25 +18,15 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  flex-shrink: 0;
   text-decoration: none;
-  white-space: nowrap;
 }
 
 .logo img {
   display: block;
-  flex-shrink: 0;
-}
-
-.logoTexto {
-  font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--color-ink);
-}
-
-.logoTexto span {
-  color: var(--color-pink);
+  width: 88px;
+  height: 88px;
+  padding: 4px;
 }
 
 .toggle {
@@ -48,10 +38,24 @@
   padding: 8px;
 }
 
-.nav {
+.navIzquierda,
+.navDerecha {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  flex: 1;
+}
+
+.navIzquierda {
+  justify-content: flex-end;
+}
+
+.navDerecha {
+  justify-content: flex-start;
+}
+
+.navMovil {
+  display: none;
 }
 
 .link {
@@ -61,6 +65,7 @@
   font-size: 17px;
   padding: 6px 2px;
   border-bottom: 3px solid transparent;
+  white-space: nowrap;
 }
 
 .link:hover {
@@ -88,11 +93,22 @@
 }
 
 @media (max-width: 860px) {
+  .logo img {
+    width: 64px;
+    height: 64px;
+  }
+
   .toggle {
     display: block;
   }
 
-  .nav {
+  .navIzquierda,
+  .navDerecha {
+    display: none;
+  }
+
+  .navMovil {
+    display: flex;
     position: absolute;
     top: 100%;
     left: 0;
@@ -107,7 +123,7 @@
     transition: max-height 0.3s ease;
   }
 
-  .navOpen {
+  .navMovilOpen {
     max-height: 420px;
   }
 

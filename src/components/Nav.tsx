@@ -3,14 +3,23 @@ import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import styles from './Nav.module.css';
 
-const LINKS = [
+const LINKS_IZQUIERDA = [
   { to: '/', label: 'Inicio' },
   { to: '/retos', label: 'Retos' },
   { to: '/sobre', label: 'Sobre mí' },
+];
+
+const LINKS_DERECHA = [
   { to: '/blog', label: 'Blog' },
   { to: '/tienda', label: 'Tienda' },
   { to: '/contacto', label: 'Contacto' },
 ];
+
+const LINKS = [...LINKS_IZQUIERDA, ...LINKS_DERECHA];
+
+function enlaceClase({ isActive }: { isActive: boolean }): string {
+  return `${styles.link} ${isActive ? styles.linkActive : ''}`;
+}
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -18,9 +27,28 @@ export default function Nav() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.bar}`}>
+        <nav className={styles.navIzquierda}>
+          {LINKS_IZQUIERDA.map((link) => (
+            <NavLink key={link.to} to={link.to} end={link.to === '/'} className={enlaceClase}>
+              {link.label}
+            </NavLink>
+          ))}
+        </nav>
+
         <NavLink to="/" className={styles.logo} onClick={() => setOpen(false)}>
-          <img src="/logo.png" alt="La Nani Fitness" width={64} height={64} />
+          <img src="/logo.png" alt="La Nani Fitness" width={200} height={200} />
         </NavLink>
+
+        <nav className={styles.navDerecha}>
+          {LINKS_DERECHA.map((link) => (
+            <NavLink key={link.to} to={link.to} className={enlaceClase}>
+              {link.label}
+            </NavLink>
+          ))}
+          <NavLink to="/retos" className={styles.cta}>
+            Empieza el reto
+          </NavLink>
+        </nav>
 
         <button
           className={styles.toggle}
@@ -31,13 +59,13 @@ export default function Nav() {
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`}>
+        <nav className={`${styles.navMovil} ${open ? styles.navMovilOpen : ''}`}>
           {LINKS.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               end={link.to === '/'}
-              className={({ isActive }) => `${styles.link} ${isActive ? styles.linkActive : ''}`}
+              className={enlaceClase}
               onClick={() => setOpen(false)}
             >
               {link.label}
