@@ -9,6 +9,12 @@ export interface PasoCamino {
   descripcion: string;
 }
 
+export interface VideoDia {
+  dia: number;
+  titulo: string;
+  youtubeId: string; // solo el ID, ej: "dQw4w9WgXcQ" de youtube.com/watch?v=dQw4w9WgXcQ
+}
+
 export interface Reto {
   id: string;
   slug: string;
@@ -19,6 +25,7 @@ export interface Reto {
   problema: string; // el dolor real que resuelve
   beneficios: string[];
   destacado?: boolean;
+  paypalHostedButtonId?: string; // si existe, el CTA compra directo por PayPal
 }
 
 export interface TestimonioSobre {

@@ -124,6 +124,10 @@
   box-shadow: var(--shadow-lift);
 }
 
+.paypalWrap {
+  min-width: 200px;
+}
+
 .verMas {
   text-align: center;
   margin-top: var(--space-4);
