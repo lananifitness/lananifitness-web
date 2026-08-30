@@ -93,6 +93,18 @@
 }
 
 @media (max-width: 860px) {
+  .bar {
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 0;
+  }
+
   .logo img {
     width: 64px;
     height: 64px;
