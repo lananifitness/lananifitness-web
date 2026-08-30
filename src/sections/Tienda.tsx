@@ -30,19 +30,19 @@ export default function Tienda() {
         </header>
 
         <div className={styles.grid}>
-          {CATEGORIAS_TIENDA.map((cat) => {
+          {CATEGORIAS_TIENDA.map((cat, i) => {
             const Icono = ICONOS[cat.icono];
+            const colorClass = styles[`color${i % 4}`];
             return (
               <a
                 key={cat.id}
                 href={AMAZON_ESCAPARATE_LINK}
                 target="_blank"
                 rel="noopener noreferrer nofollow sponsored"
-                className={`reveal ${styles.card}`}
+                className={`reveal ${styles.card} ${colorClass}`}
               >
-                <span className={styles.iconChip}>
-                  <Icono size={24} />
-                </span>
+                <Icono className={styles.iconFondo} />
+                <Icono className={styles.icono} size={30} />
                 <h3>{cat.nombre}</h3>
                 <p>{cat.descripcion}</p>
                 <span className={styles.verMas}>
