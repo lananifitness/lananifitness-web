@@ -131,21 +131,43 @@
 .paso {
   position: relative;
   z-index: 1;
-  background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
   text-align: center;
+  color: #fff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.paso:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-3px);
+}
+
+.color0 {
+  background: var(--color-pink);
+}
+
+.color1 {
+  background: var(--color-orange);
+}
+
+.color2 {
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
+}
+
+.color3 {
+  background: var(--color-pink-light);
 }
 
 .paso h3 {
-  color: var(--color-pink);
+  color: #fff;
   margin: var(--space-1) 0 6px;
   font-size: 22px;
 }
 
 .paso p {
-  color: var(--color-ink-soft);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 16px;
   line-height: 1.5;
 }
@@ -157,7 +179,7 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: var(--gradient-brand);
+  background: rgba(255, 255, 255, 0.25);
   color: #fff;
   font-family: var(--font-display);
   font-weight: 700;

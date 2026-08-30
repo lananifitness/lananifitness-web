@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import styles from './Nav.module.css';
@@ -23,9 +23,17 @@ function enlaceClase({ isActive }: { isActive: boolean }): string {
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       <div className={`container ${styles.bar}`}>
         <nav className={styles.navIzquierda}>
           {LINKS_IZQUIERDA.map((link) => (

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ChevronDown } from 'lucide-react';
+import { CheckCircle2, ChevronDown, Flame } from 'lucide-react';
 import { RETOS } from '../data';
 import { useReveal } from '../hooks/useReveal';
 import styles from './Retos.module.css';
@@ -31,14 +31,16 @@ export default function Retos({ variant = 'full' }: Props) {
         )}
 
         <div className={styles.grid}>
-          {retos.map((reto, i) => {
-            const colorClass = styles[`color${i % 4}`];
-            return (
-              <article key={reto.id} className={`reveal ${styles.card} ${colorClass}`}>
+          {retos.map((reto) => (
+            <article key={reto.id} className={`reveal ${styles.card}`}>
+              <div className={styles.cardHeader}>
+                <Flame className={styles.iconFondo} />
                 {reto.destacado && <span className={styles.badge}>El más elegido</span>}
                 <h3>{reto.nombre}</h3>
                 <p className={styles.problema}>Para ti si sientes: {reto.problema}</p>
+              </div>
 
+              <div className={styles.cardBody}>
                 <ul className={styles.beneficios}>
                   {reto.beneficios.map((b) => (
                     <li key={b}>
@@ -85,9 +87,9 @@ export default function Retos({ variant = 'full' }: Props) {
                     </Link>
                   )}
                 </div>
-              </article>
-            );
-          })}
+              </div>
+            </article>
+          ))}
         </div>
 
         {variant === 'preview' && (

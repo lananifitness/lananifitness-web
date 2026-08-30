@@ -28,13 +28,12 @@
 
 .card {
   position: relative;
+  background: var(--color-white);
   border-radius: var(--radius-lg);
-  padding: var(--space-4);
-  box-shadow: var(--shadow-soft);
-  color: #fff;
+  box-shadow: var(--shadow-card-rest);
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  overflow: hidden;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
@@ -43,43 +42,59 @@
   transform: translateY(-4px);
 }
 
-.color0 {
-  background: var(--color-pink);
-}
-
-.color1 {
-  background: var(--color-orange);
-}
-
-.color2 {
+.cardHeader {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-4) var(--space-4) var(--space-3);
   background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
+  color: #fff;
 }
 
-.color3 {
-  background: var(--color-pink-light);
+.iconFondo {
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  width: 140px;
+  height: 140px;
+  opacity: 0.18;
+  color: #fff;
 }
 
 .badge {
-  position: absolute;
-  top: -14px;
-  left: var(--space-3);
-  background: var(--color-ink);
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.22);
   color: #fff;
   font-weight: 700;
   font-size: 14px;
   padding: 6px 16px;
   border-radius: var(--radius-pill);
+  margin-bottom: var(--space-2);
 }
 
-.card h3 {
+.cardHeader h3 {
+  position: relative;
+  z-index: 1;
   font-size: 28px;
   color: #fff;
 }
 
 .problema {
+  position: relative;
+  z-index: 1;
   color: #fff;
   font-weight: 600;
   font-size: 17px;
+  margin-top: 4px;
+}
+
+.cardBody {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
 }
 
 .beneficios {
@@ -95,11 +110,11 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-ink-soft);
 }
 
 .beneficios svg {
-  color: #fff;
+  color: var(--color-orange);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -111,7 +126,7 @@
   justify-content: space-between;
   gap: var(--space-2);
   padding-top: var(--space-2);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid var(--color-line);
   flex-wrap: wrap;
 }
 
@@ -119,17 +134,17 @@
   font-family: var(--font-display);
   font-size: 28px;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-ink);
 }
 
 .duracion {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-ink-soft);
   font-size: 16px;
 }
 
 .cta {
-  background: var(--color-white);
-  color: var(--color-pink);
+  background: var(--gradient-brand);
+  color: #fff;
   text-decoration: none;
   font-weight: 700;
   padding: 14px 24px;
@@ -144,7 +159,7 @@
 }
 
 .diasAcordeon {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid var(--color-line);
   padding-top: var(--space-2);
 }
 
@@ -154,7 +169,7 @@
   justify-content: space-between;
   cursor: pointer;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-pink);
   font-size: 15px;
   list-style: none;
 }
@@ -187,14 +202,14 @@
   display: flex;
   gap: 8px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-ink-soft);
   line-height: 1.4;
 }
 
 .diaNumero {
   flex-shrink: 0;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-orange);
   white-space: nowrap;
 }
 

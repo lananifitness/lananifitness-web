@@ -20,12 +20,13 @@ export default function Contacto() {
 
         <div className={styles.canales}>
           <a
-            className={`reveal ${styles.canal}`}
+            className={`reveal ${styles.canal} ${styles.color0}`}
             href="https://wa.me/34614605283?text=Hola%20Nani%2C%20quiero%20saber%20m%C3%A1s%20sobre%20tus%20retos"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <MessageCircle size={26} />
+            <MessageCircle className={styles.iconFondo} />
+            <MessageCircle className={styles.icono} size={26} />
             <div>
               <h3>WhatsApp</h3>
               <p>La forma más rápida de escribirme</p>
@@ -33,10 +34,11 @@ export default function Contacto() {
           </a>
 
           <a
-            className={`reveal ${styles.canal}`}
+            className={`reveal ${styles.canal} ${styles.color1}`}
             href="mailto:hola@lananifitness.com"
           >
-            <Mail size={26} />
+            <Mail className={styles.iconFondo} />
+            <Mail className={styles.icono} size={26} />
             <div>
               <h3>Correo</h3>
               <p>hola@lananifitness.com</p>
@@ -44,12 +46,13 @@ export default function Contacto() {
           </a>
 
           <a
-            className={`reveal ${styles.canal}`}
+            className={`reveal ${styles.canal} ${styles.color2}`}
             href="https://www.instagram.com/lananifitness"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Instagram size={26} />
+            <Instagram className={styles.iconFondo} />
+            <Instagram className={styles.icono} size={26} />
             <div>
               <h3>Instagram</h3>
               <p>@lananifitness</p>

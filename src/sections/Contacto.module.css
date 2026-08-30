@@ -28,32 +28,63 @@
 }
 
 .canal {
+  position: relative;
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
   text-decoration: none;
-  color: var(--color-ink);
+  color: #fff;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .canal:hover {
   box-shadow: var(--shadow-lift);
+  transform: translateY(-3px);
 }
 
-.canal svg {
-  color: var(--color-pink);
+.color0 {
+  background: var(--color-pink);
+}
+
+.color1 {
+  background: var(--color-orange);
+}
+
+.color2 {
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
+}
+
+.iconFondo {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 84px;
+  height: 84px;
+  opacity: 0.18;
+  color: #fff;
+}
+
+.icono {
+  position: relative;
+  z-index: 1;
   flex-shrink: 0;
 }
 
 .canal h3 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
   font-size: 20px;
 }
 
 .canal p {
-  color: var(--color-ink-soft);
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 15px;
   margin-top: 2px;
 }

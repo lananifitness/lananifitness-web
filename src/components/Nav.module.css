@@ -1,10 +1,19 @@
 .header {
   position: sticky;
-  top: 0;
+  top: 12px;
   z-index: 50;
-  background: rgba(255, 248, 245, 0.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--color-line);
+  max-width: 1300px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(120deg, rgba(232, 48, 90, 0.92) 0%, rgba(240, 122, 48, 0.92) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headerScrolled {
+  background: linear-gradient(120deg, rgba(232, 48, 90, 0.6) 0%, rgba(240, 122, 48, 0.6) 100%);
+  box-shadow: var(--shadow-lift);
 }
 
 .bar {
@@ -27,13 +36,16 @@
   width: 88px;
   height: 88px;
   padding: 4px;
+  background: var(--color-white);
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
 }
 
 .toggle {
   display: none;
   background: none;
   border: none;
-  color: var(--color-ink);
+  color: #fff;
   cursor: pointer;
   padding: 8px;
 }
@@ -61,7 +73,7 @@
 .link {
   font-weight: 600;
   text-decoration: none;
-  color: var(--color-ink-soft);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 17px;
   padding: 6px 2px;
   border-bottom: 3px solid transparent;
@@ -69,27 +81,29 @@
 }
 
 .link:hover {
-  color: var(--color-pink);
+  color: #fff;
 }
 
 .linkActive {
-  color: var(--color-pink);
-  border-bottom-color: var(--color-orange);
+  color: #fff;
+  border-bottom-color: #fff;
 }
 
 .cta {
-  background: var(--gradient-brand);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-pink);
   text-decoration: none;
   font-weight: 700;
   padding: 12px 22px;
   border-radius: var(--radius-pill);
   white-space: nowrap;
   box-shadow: var(--shadow-soft);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .cta:hover {
   box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 860px) {
@@ -131,7 +145,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    border-bottom: 1px solid var(--color-line);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -139,6 +153,20 @@
 
   .navMovilOpen {
     max-height: 420px;
+    box-shadow: var(--shadow-lift);
+  }
+
+  .navMovil .link {
+    color: var(--color-ink-soft);
+  }
+
+  .navMovil .link:hover {
+    color: var(--color-pink);
+  }
+
+  .navMovil .linkActive {
+    color: var(--color-pink);
+    border-bottom-color: var(--color-orange);
   }
 
   .link,
@@ -149,6 +177,8 @@
   }
 
   .cta {
+    background: var(--gradient-brand);
+    color: #fff;
     margin: var(--space-2) var(--space-3);
     border-radius: var(--radius-pill);
   }
