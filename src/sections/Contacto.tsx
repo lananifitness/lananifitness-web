@@ -21,7 +21,7 @@ export default function Contacto() {
         <div className={styles.canales}>
           <a
             className={`reveal ${styles.canal}`}
-            href="https://wa.me/34600000000?text=Hola%20Nani%2C%20quiero%20saber%20m%C3%A1s%20sobre%20tus%20retos"
+            href="https://wa.me/34614605283?text=Hola%20Nani%2C%20quiero%20saber%20m%C3%A1s%20sobre%20tus%20retos"
             target="_blank"
             rel="noopener noreferrer"
           >
