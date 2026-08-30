@@ -8,6 +8,7 @@ const LINKS = [
   { to: '/retos', label: 'Retos' },
   { to: '/sobre', label: 'Sobre mí' },
   { to: '/blog', label: 'Blog' },
+  { to: '/tienda', label: 'Tienda' },
   { to: '/contacto', label: 'Contacto' },
 ];
 
