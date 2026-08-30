@@ -31,63 +31,63 @@ export default function Retos({ variant = 'full' }: Props) {
         )}
 
         <div className={styles.grid}>
-          {retos.map((reto) => (
-            <article
-              key={reto.id}
-              className={`reveal ${styles.card} ${reto.destacado ? styles.cardDestacado : ''}`}
-            >
-              {reto.destacado && <span className={styles.badge}>El más elegido</span>}
-              <h3>{reto.nombre}</h3>
-              <p className={styles.problema}>Para ti si sientes: {reto.problema}</p>
+          {retos.map((reto, i) => {
+            const colorClass = styles[`color${i % 4}`];
+            return (
+              <article key={reto.id} className={`reveal ${styles.card} ${colorClass}`}>
+                {reto.destacado && <span className={styles.badge}>El más elegido</span>}
+                <h3>{reto.nombre}</h3>
+                <p className={styles.problema}>Para ti si sientes: {reto.problema}</p>
 
-              <ul className={styles.beneficios}>
-                {reto.beneficios.map((b) => (
-                  <li key={b}>
-                    <CheckCircle2 size={20} />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
+                <ul className={styles.beneficios}>
+                  {reto.beneficios.map((b) => (
+                    <li key={b}>
+                      <CheckCircle2 size={20} />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
 
-              {reto.diasIncluidos && (
-                <details className={styles.diasAcordeon}>
-                  <summary>
-                    Ver los {reto.diasIncluidos.length} días del reto
-                    <ChevronDown size={18} />
-                  </summary>
-                  <ol className={styles.diasLista}>
-                    {reto.diasIncluidos.map((dia) => (
-                      <li key={dia.dia}>
-                        <span className={styles.diaNumero}>Día {dia.dia}</span>
-                        <span>{dia.titulo}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </details>
-              )}
-
-              <div className={styles.footer}>
-                <div>
-                  <span className={styles.precio}>{reto.precio.toFixed(2)}€</span>
-                  <span className={styles.duracion}> · {reto.duracionDias} días</span>
-                </div>
-                {reto.paypalLink ? (
-                  <a
-                    href={reto.paypalLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.cta}
-                  >
-                    Quiero este reto
-                  </a>
-                ) : (
-                  <Link to="/contacto" className={styles.cta}>
-                    Quiero este reto
-                  </Link>
+                {reto.diasIncluidos && (
+                  <details className={styles.diasAcordeon}>
+                    <summary>
+                      Ver los {reto.diasIncluidos.length} días del reto
+                      <ChevronDown size={18} />
+                    </summary>
+                    <ol className={styles.diasLista}>
+                      {reto.diasIncluidos.map((dia) => (
+                        <li key={dia.dia}>
+                          <span className={styles.diaNumero}>Día {dia.dia}</span>
+                          <span>{dia.titulo}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </details>
                 )}
-              </div>
-            </article>
-          ))}
+
+                <div className={styles.footer}>
+                  <div>
+                    <span className={styles.precio}>{reto.precio.toFixed(2)}€</span>
+                    <span className={styles.duracion}> · {reto.duracionDias} días</span>
+                  </div>
+                  {reto.paypalLink ? (
+                    <a
+                      href={reto.paypalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.cta}
+                    >
+                      Quiero este reto
+                    </a>
+                  ) : (
+                    <Link to="/contacto" className={styles.cta}>
+                      Quiero este reto
+                    </Link>
+                  )}
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         {variant === 'preview' && (

@@ -47,12 +47,11 @@ export default function Sobre({ variant = 'full' }: Props) {
             <div className={styles.valores}>
               {VALORES.map((valor, i) => {
                 const Icono = ICONOS[valor.icono];
-                const chipClass = i % 2 === 0 ? styles.chipRosa : styles.chipNaranja;
+                const colorClass = styles[`color${i % 4}`];
                 return (
-                  <div key={valor.id} className={`reveal ${styles.valor}`}>
-                    <span className={`${styles.iconChip} ${chipClass}`}>
-                      <Icono size={24} />
-                    </span>
+                  <div key={valor.id} className={`reveal ${styles.valor} ${colorClass}`}>
+                    <Icono className={styles.iconFondo} />
+                    <Icono className={styles.icono} size={28} />
                     <h3>{valor.titulo}</h3>
                     <p>{valor.descripcion}</p>
                   </div>

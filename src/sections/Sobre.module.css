@@ -55,39 +55,64 @@
 }
 
 .valor {
-  background: var(--color-white);
+  position: relative;
   border-radius: var(--radius-lg);
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
+  color: #fff;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.iconChip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  margin-bottom: var(--space-2);
+.valor:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-4px);
 }
 
-.chipRosa {
-  background: var(--color-pink-tint);
-  color: var(--color-pink);
+.color0 {
+  background: var(--color-pink);
 }
 
-.chipNaranja {
-  background: var(--color-orange-tint);
-  color: var(--color-orange);
+.color1 {
+  background: var(--color-orange);
+}
+
+.color2 {
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
+}
+
+.color3 {
+  background: var(--color-pink-light);
+}
+
+.iconFondo {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 96px;
+  height: 96px;
+  opacity: 0.18;
+  color: #fff;
+}
+
+.icono {
+  position: relative;
+  z-index: 1;
+  margin-bottom: var(--space-1);
 }
 
 .valor h3 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
   font-size: 21px;
   margin-bottom: 6px;
 }
 
 .valor p {
-  color: var(--color-ink-soft);
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 16px;
 }
 

@@ -20,20 +20,43 @@
 }
 
 .card {
-  background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-4px);
+}
+
+.color0 {
+  background: var(--color-pink);
+}
+
+.color1 {
+  background: var(--color-orange);
+}
+
+.color2 {
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
+}
+
+.color3 {
+  background: var(--color-pink-light);
 }
 
 .categoria {
   display: inline-block;
   align-self: flex-start;
-  background: rgba(240, 122, 48, 0.14);
-  color: var(--color-orange);
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
   font-weight: 700;
   font-size: 14px;
   padding: 4px 12px;
@@ -41,18 +64,19 @@
 }
 
 .card h3 {
+  color: #fff;
   font-size: 22px;
 }
 
 .resumen {
-  color: var(--color-ink-soft);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 16px;
 }
 
 .meta {
   display: flex;
   justify-content: space-between;
-  color: var(--color-ink-soft);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 14px;
   margin-top: auto;
 }
@@ -64,7 +88,7 @@
 }
 
 .leer {
-  color: var(--color-pink);
+  color: #fff;
   font-weight: 700;
   text-decoration: none;
   font-size: 16px;

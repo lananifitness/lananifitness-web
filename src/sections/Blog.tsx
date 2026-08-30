@@ -29,22 +29,25 @@ export default function Blog({ variant = 'full' }: Props) {
         </header>
 
         <div className={styles.grid}>
-          {posts.map((post) => (
-            <article key={post.id} className={`reveal ${styles.card}`}>
-              <span className={styles.categoria}>{post.categoria}</span>
-              <h3>{post.titulo}</h3>
-              <p className={styles.resumen}>{post.resumen}</p>
-              <div className={styles.meta}>
-                <span>{formatearFecha(post.fecha)}</span>
-                <span className={styles.lectura}>
-                  <Clock size={16} /> {post.minutosLectura} min
-                </span>
-              </div>
-              <Link to={`/blog/${post.slug}`} className={styles.leer}>
-                Leer artículo →
-              </Link>
-            </article>
-          ))}
+          {posts.map((post, i) => {
+            const colorClass = styles[`color${i % 4}`];
+            return (
+              <article key={post.id} className={`reveal ${styles.card} ${colorClass}`}>
+                <span className={styles.categoria}>{post.categoria}</span>
+                <h3>{post.titulo}</h3>
+                <p className={styles.resumen}>{post.resumen}</p>
+                <div className={styles.meta}>
+                  <span>{formatearFecha(post.fecha)}</span>
+                  <span className={styles.lectura}>
+                    <Clock size={16} /> {post.minutosLectura} min
+                  </span>
+                </div>
+                <Link to={`/blog/${post.slug}`} className={styles.leer}>
+                  Leer artículo →
+                </Link>
+              </article>
+            );
+          })}
         </div>
 
         {variant === 'preview' && (
