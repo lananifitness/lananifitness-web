@@ -69,6 +69,14 @@ export interface CategoriaTienda {
   descripcion: string;
 }
 
+export interface RedSocial {
+  id: string;
+  nombre: string;
+  icono: 'instagram' | 'youtube' | 'facebook';
+  seguidores: string;
+  link: string;
+}
+
 export interface SeoMeta {
   title: string;
   description: string;

@@ -1,4 +1,4 @@
-import type { PasoCamino, Reto, TestimonioSobre, Valor, PostBlog, Faq, SeoMeta, VideoDia, CategoriaTienda } from './types';
+import type { PasoCamino, Reto, TestimonioSobre, Valor, PostBlog, Faq, SeoMeta, VideoDia, CategoriaTienda, RedSocial } from './types';
 
 export const FRASE_FIRMA = 'Anímate, atrévate, acompáñame y comparte';
 
@@ -233,6 +233,30 @@ export const CATEGORIAS_TIENDA: CategoriaTienda[] = [
     nombre: 'Manualidades',
     icono: 'scissors',
     descripcion: 'Ideas para esos ratitos de calma, lejos de las pantallas.',
+  },
+];
+
+export const REDES_SOCIALES: RedSocial[] = [
+  {
+    id: 'instagram',
+    nombre: 'Instagram',
+    icono: 'instagram',
+    seguidores: '480 mil',
+    link: 'https://www.instagram.com/lananifitness',
+  },
+  {
+    id: 'facebook',
+    nombre: 'Facebook',
+    icono: 'facebook',
+    seguidores: '366 mil',
+    link: 'https://www.facebook.com/lananifitness',
+  },
+  {
+    id: 'youtube',
+    nombre: 'YouTube',
+    icono: 'youtube',
+    seguidores: '58,7 mil',
+    link: 'https://www.youtube.com/@lananifitness',
   },
 ];
 
