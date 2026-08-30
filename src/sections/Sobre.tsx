@@ -32,11 +32,14 @@ export default function Sobre({ variant = 'full' }: Props) {
               />
               <header className={styles.header}>
                 <p className={styles.eyebrow}>Mi historia</p>
-                <h1>De Venezuela a acompañarte desde España</h1>
+                <h1>Tengo 65 años y esta es mi forma de ayudarte a vivir mejor</h1>
                 <p className={styles.lead}>
-                  Empecé grabando rutinas cortas para mi propia familia. Hoy somos una comunidad
-                  enorme de mujeres +60 que se mueven juntas, cada una a su ritmo. Este espacio
-                  nació de una sola idea: que nadie se quede fuera del ejercicio por su edad.
+                  No busco un cuerpo de revista, y el tuyo tampoco tiene que serlo. Busco que
+                  subas las escaleras sin quedarte sin aire, que juegues con tus nietos sin miedo
+                  a caerte, que tengas la energía para disfrutar cada día. Empecé grabando rutinas
+                  cortas para mi propia familia, en Venezuela. Hoy, desde España, acompaño a una
+                  comunidad enorme de mujeres +60 que decidieron que la edad no define lo que
+                  pueden hacer con su cuerpo.
                 </p>
               </header>
             </div>
