@@ -258,6 +258,20 @@ export const REDES_SOCIALES: RedSocial[] = [
     seguidores: '58,7 mil',
     link: 'https://www.youtube.com/@lananifitness',
   },
+  {
+    id: 'tiktok',
+    nombre: 'TikTok',
+    icono: 'tiktok',
+    seguidores: '42 mil',
+    link: 'https://www.tiktok.com/@lananifitness',
+  },
+  {
+    id: 'threads',
+    nombre: 'Threads',
+    icono: 'threads',
+    seguidores: '88 mil',
+    link: 'https://www.threads.net/@lananifitness',
+  },
 ];
 
 export const SEO_PAGINAS: Record<string, SeoMeta> = {

@@ -72,7 +72,7 @@ export interface CategoriaTienda {
 export interface RedSocial {
   id: string;
   nombre: string;
-  icono: 'instagram' | 'youtube' | 'facebook';
+  icono: 'instagram' | 'youtube' | 'facebook' | 'tiktok' | 'threads';
   seguidores: string;
   link: string;
 }

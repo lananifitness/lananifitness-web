@@ -8,6 +8,14 @@
   font-weight: 700;
   font-size: 20px;
   color: var(--color-ink-soft);
+  margin-bottom: var(--space-1);
+}
+
+.total {
+  text-align: center;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--color-pink);
   margin-bottom: var(--space-3);
 }
 
