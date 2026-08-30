@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://lananifitness.github.io/sitemap.xml
