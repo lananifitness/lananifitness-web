@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PlayCircle, CheckCircle2 } from 'lucide-react';
+import { PlayCircle, CheckCircle2, X } from 'lucide-react';
 import { VIDEOS_RETO_VUELVO_A_MOVERME } from '../data';
 import { useReveal } from '../hooks/useReveal';
 import styles from './GraciasReto.module.css';
@@ -7,6 +7,7 @@ import styles from './GraciasReto.module.css';
 export default function GraciasReto() {
   const ref = useReveal<HTMLDivElement>();
   const [completados, setCompletados] = useState<Set<number>>(new Set());
+  const [videoAbierto, setVideoAbierto] = useState<string | null>(null);
 
   const toggleCompletado = (dia: number) => {
     setCompletados((prev) => {
@@ -51,15 +52,13 @@ export default function GraciasReto() {
                 {listo && <p className={styles.tituloVideo}>{video.titulo}</p>}
 
                 {listo ? (
-                  <a
-                    href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => setVideoAbierto(video.youtubeId)}
                     className={styles.link}
                   >
                     <PlayCircle size={20} />
                     Ver rutina
-                  </a>
+                  </button>
                 ) : (
                   <span className={styles.proximamente}>Muy pronto</span>
                 )}
@@ -76,6 +75,32 @@ export default function GraciasReto() {
           </p>
         </div>
       </div>
+
+      {videoAbierto && (
+        <div
+          className={styles.modalFondo}
+          onClick={() => setVideoAbierto(null)}
+          role="presentation"
+        >
+          <div className={styles.modalContenido} onClick={(e) => e.stopPropagation()}>
+            <button
+              className={styles.modalCerrar}
+              onClick={() => setVideoAbierto(null)}
+              aria-label="Cerrar video"
+            >
+              <X size={26} />
+            </button>
+            <div className={styles.modalVideoWrap}>
+              <iframe
+                src={`https://www.youtube.com/embed/${videoAbierto}?autoplay=1`}
+                title="Rutina de La Nani Fitness"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

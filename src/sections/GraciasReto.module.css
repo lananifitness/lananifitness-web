@@ -85,6 +85,11 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
 }
 
 .proximamente {
@@ -106,4 +111,50 @@
   max-width: 52ch;
   margin-left: auto;
   margin-right: auto;
+}
+
+.modalFondo {
+  position: fixed;
+  inset: 0;
+  background: rgba(51, 21, 33, 0.85);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+}
+
+.modalContenido {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+.modalCerrar {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.modalVideoWrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lift);
+}
+
+.modalVideoWrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
