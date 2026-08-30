@@ -1,5 +1,6 @@
 .section {
   padding: var(--space-6) 0;
+  background: var(--color-orange-tint);
 }
 
 .header {
@@ -36,15 +37,24 @@
   box-shadow: var(--shadow-soft);
   text-decoration: none;
   color: var(--color-ink);
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
   box-shadow: var(--shadow-lift);
+  transform: translateY(-3px);
 }
 
-.card svg:first-child {
+.iconChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-pink-tint);
   color: var(--color-pink);
+  margin-bottom: 4px;
 }
 
 .card h3 {
@@ -86,10 +96,12 @@
   padding: 16px 30px;
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-soft);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .ctaBoton:hover {
   box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
 }
 
 .disclaimer {

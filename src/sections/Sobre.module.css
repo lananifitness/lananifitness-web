@@ -1,5 +1,6 @@
 .section {
   padding: var(--space-6) 0;
+  background: var(--color-pink-tint);
 }
 
 .header {
@@ -34,9 +35,24 @@
   box-shadow: var(--shadow-soft);
 }
 
-.valor svg {
+.iconChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: var(--space-2);
+}
+
+.chipRosa {
+  background: var(--color-pink-tint);
   color: var(--color-pink);
-  margin-bottom: var(--space-1);
+}
+
+.chipNaranja {
+  background: var(--color-orange-tint);
+  color: var(--color-orange);
 }
 
 .valor h3 {

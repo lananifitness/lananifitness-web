@@ -9,6 +9,9 @@
   --color-white: #ffffff;
   --color-line: #f0d9d0;
 
+  --color-pink-tint: #fdeaf0;
+  --color-orange-tint: #fff1e6;
+
   --gradient-brand: linear-gradient(120deg, var(--color-pink) 0%, var(--color-orange) 100%);
 
   --font-display: 'Baloo 2', system-ui, sans-serif;

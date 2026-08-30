@@ -40,7 +40,9 @@ export default function Tienda() {
                 rel="noopener noreferrer nofollow sponsored"
                 className={`reveal ${styles.card}`}
               >
-                <Icono size={28} />
+                <span className={styles.iconChip}>
+                  <Icono size={24} />
+                </span>
                 <h3>{cat.nombre}</h3>
                 <p>{cat.descripcion}</p>
                 <span className={styles.verMas}>
