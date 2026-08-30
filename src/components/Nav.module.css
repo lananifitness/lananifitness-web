@@ -16,15 +16,26 @@
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
-  color: var(--color-ink);
   white-space: nowrap;
 }
 
-.logo span {
+.logo img {
+  display: block;
+  flex-shrink: 0;
+}
+
+.logoTexto {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.logoTexto span {
   color: var(--color-pink);
 }
 
