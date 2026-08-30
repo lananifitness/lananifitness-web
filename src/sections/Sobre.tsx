@@ -24,15 +24,22 @@ export default function Sobre({ variant = 'full' }: Props) {
       <div className="container">
         {variant === 'full' ? (
           <>
-            <header className={`reveal ${styles.header}`}>
-              <p className={styles.eyebrow}>Mi historia</p>
-              <h1>De Venezuela a acompañarte desde España</h1>
-              <p className={styles.lead}>
-                Empecé grabando rutinas cortas para mi propia familia. Hoy somos una comunidad
-                enorme de mujeres +60 que se mueven juntas, cada una a su ritmo. Este espacio nació
-                de una sola idea: que nadie se quede fuera del ejercicio por su edad.
-              </p>
-            </header>
+            <div className={`reveal ${styles.headerConFoto}`}>
+              <img
+                src="/img_4499.jpg"
+                alt="La Nani"
+                className={styles.foto}
+              />
+              <header className={styles.header}>
+                <p className={styles.eyebrow}>Mi historia</p>
+                <h1>De Venezuela a acompañarte desde España</h1>
+                <p className={styles.lead}>
+                  Empecé grabando rutinas cortas para mi propia familia. Hoy somos una comunidad
+                  enorme de mujeres +60 que se mueven juntas, cada una a su ritmo. Este espacio
+                  nació de una sola idea: que nadie se quede fuera del ejercicio por su edad.
+                </p>
+              </header>
+            </div>
 
             <div className={styles.valores}>
               {VALORES.map((valor, i) => {

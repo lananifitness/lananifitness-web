@@ -1,64 +1,64 @@
 .section {
-  padding: var(--space-5) 0;
+  padding: var(--space-4) 0 var(--space-5);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
 }
 
-.eyebrow {
-  text-align: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--color-ink-soft);
-  margin-bottom: var(--space-1);
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.total {
-  text-align: center;
-  font-weight: 700;
-  font-size: 17px;
-  color: var(--color-pink);
-  margin-bottom: var(--space-3);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--space-2);
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.card {
+.stat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: var(--space-3);
-  box-shadow: var(--shadow-soft);
+  gap: 2px;
   text-decoration: none;
   color: var(--color-ink);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  padding: 0 var(--space-5);
+  position: relative;
 }
 
-.card:hover {
-  box-shadow: var(--shadow-lift);
-  transform: translateY(-2px);
-}
-
-.card svg {
-  color: var(--color-pink);
-  margin-bottom: 6px;
+.stat:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background: var(--color-line);
 }
 
 .numero {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 26px;
-  color: var(--color-ink);
+  font-weight: 800;
+  font-size: clamp(36px, 5.5vw, 60px);
+  line-height: 1;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .nombre {
   font-size: 15px;
   color: var(--color-ink-soft);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .row {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .stat {
+    padding: 0 var(--space-3);
+  }
+
+  .stat:not(:first-child)::before {
+    display: none;
+  }
 }

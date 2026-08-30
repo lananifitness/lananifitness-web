@@ -11,13 +11,14 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={`container ${styles.top}`}>
         <div className={styles.copy}>
-          <p className={styles.eyebrow}>Ejercicio en casa, pensado para ti</p>
           <h1 className={styles.title}>
-            Nunca es tarde para <span>volver a moverte</span>
+            Nunca es tarde
+            <br />
+            para <span>volver a moverte</span>
           </h1>
           <p className={styles.lead}>
-            Soy Nani. Te acompaño con rutinas seguras, pensadas para fortalecer tus piernas,
-            cuidar tu equilibrio y devolverte la energía — sin importar por dónde empieces.
+            Rutinas seguras en casa para fortalecer piernas, cuidar tu equilibrio y devolverte la
+            energía.
           </p>
           <div className={styles.actions}>
             <Link to="/retos" className={styles.primaryCta}>

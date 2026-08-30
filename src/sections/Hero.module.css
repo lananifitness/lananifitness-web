@@ -25,16 +25,10 @@
   max-width: 720px;
 }
 
-.eyebrow {
-  font-weight: 700;
-  color: var(--color-pink);
-  letter-spacing: 0.02em;
-  margin-bottom: var(--space-2);
-  font-size: 18px;
-}
-
 .title {
   font-size: var(--fs-hero);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
 }
 
 .title span {

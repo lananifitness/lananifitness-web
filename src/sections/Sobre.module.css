@@ -3,9 +3,35 @@
   background: var(--color-pink-tint);
 }
 
+.headerConFoto {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  margin-bottom: var(--space-5);
+}
+
+.foto {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lift);
+}
+
 .header {
   max-width: 760px;
-  margin-bottom: var(--space-5);
+}
+
+@media (max-width: 700px) {
+  .headerConFoto {
+    grid-template-columns: 1fr;
+  }
+
+  .foto {
+    max-width: 220px;
+    margin: 0 auto;
+  }
 }
 
 .eyebrow {

@@ -1,4 +1,5 @@
 :root {
+  /* Marca — La Nani Fitness */
   --color-pink: #e8305a;
   --color-pink-light: #e8417a;
   --color-orange: #f07a30;
@@ -17,12 +18,13 @@
   --font-display: 'Baloo 2', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
+  /* Tipografía accesible para +60: base grande, escala generosa */
   --fs-body: 19px;
   --fs-lead: 22px;
   --fs-h3: 26px;
   --fs-h2: 36px;
   --fs-h1: 52px;
-  --fs-hero: clamp(40px, 6vw, 76px);
+  --fs-hero: clamp(52px, 9vw, 108px);
 
   --space-1: 8px;
   --space-2: 16px;
@@ -116,12 +118,14 @@ img {
   padding: 0 var(--space-3);
 }
 
+/* Foco de teclado visible, siempre */
 :focus-visible {
   outline: 3px solid var(--color-orange);
   outline-offset: 3px;
   border-radius: 6px;
 }
 
+/* Animación de aparición controlada por useReveal */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
