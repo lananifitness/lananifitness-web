@@ -1,9 +1,8 @@
 export type PasoId = 'animate' | 'atrevete' | 'acompaname' | 'comparte';
 
-/** Los 4 pasos del camino, tomados de la frase firma de La Nani. */
 export interface PasoCamino {
   id: PasoId;
-  numero: string; // '01' etc — sí tiene sentido aquí: es una secuencia real
+  numero: string;
   verbo: string;
   titulo: string;
   descripcion: string;
@@ -12,7 +11,7 @@ export interface PasoCamino {
 export interface VideoDia {
   dia: number;
   titulo: string;
-  youtubeId: string; // solo el ID, ej: "dQw4w9WgXcQ" de youtube.com/watch?v=dQw4w9WgXcQ
+  youtubeId: string;
 }
 
 export interface Reto {
@@ -22,10 +21,11 @@ export interface Reto {
   duracionDias: number;
   precio: number;
   nivel: 'principiante' | 'todos los niveles';
-  problema: string; // el dolor real que resuelve
+  problema: string;
   beneficios: string[];
   destacado?: boolean;
-  paypalHostedButtonId?: string; // si existe, el CTA compra directo por PayPal
+  paypalLink?: string;
+  diasIncluidos?: VideoDia[];
 }
 
 export interface TestimonioSobre {
@@ -50,10 +50,10 @@ export interface PostBlog {
   titulo: string;
   resumen: string;
   categoria: string;
-  fecha: string; // ISO
+  fecha: string;
   minutosLectura: number;
   imagen: string;
-  contenido: string[]; // párrafos
+  contenido: string[];
 }
 
 export interface Faq {

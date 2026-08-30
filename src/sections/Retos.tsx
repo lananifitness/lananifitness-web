@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { CheckCircle2 } from 'lucide-react';
 import { RETOS } from '../data';
 import { useReveal } from '../hooks/useReveal';
-import PayPalButton from '../components/PayPalButton';
 import styles from './Retos.module.css';
 
 interface Props {
@@ -55,15 +54,9 @@ export default function Retos({ variant = 'full' }: Props) {
                   <span className={styles.precio}>{reto.precio.toFixed(2)}€</span>
                   <span className={styles.duracion}> · {reto.duracionDias} días</span>
                 </div>
-                {reto.paypalHostedButtonId ? (
-                  <div className={styles.paypalWrap}>
-                    <PayPalButton hostedButtonId={reto.paypalHostedButtonId} />
-                  </div>
-                ) : (
-                  <Link to="/contacto" className={styles.cta}>
-                    Quiero este reto
-                  </Link>
-                )}
+                <Link to="/contacto" className={styles.cta}>
+                  Quiero este reto
+                </Link>
               </div>
             </article>
           ))}
