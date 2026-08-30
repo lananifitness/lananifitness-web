@@ -201,7 +201,7 @@ export const BLOG_POSTS: PostBlog[] = [
   },
 ];
 
-export const AMAZON_ESCAPARATE_LINK = 'https://amzn.eu/d/0bygwsR8';
+export const AMAZON_ESCAPARATE_LINK = 'https://amzn.eu/d/07bfyARy';
 
 export const CATEGORIAS_TIENDA: CategoriaTienda[] = [
   {
