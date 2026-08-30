@@ -19,10 +19,7 @@ export default function Nav() {
     <header className={styles.header}>
       <div className={`container ${styles.bar}`}>
         <NavLink to="/" className={styles.logo} onClick={() => setOpen(false)}>
-          <img src="/logo.png" alt="La Nani Fitness" width={44} height={44} />
-          <span className={styles.logoTexto}>
-            La Nani <span>Fitness</span>
-          </span>
+          <img src="/logo.png" alt="La Nani Fitness" width={64} height={64} />
         </NavLink>
 
         <button
