@@ -1,4 +1,4 @@
-import type { PasoCamino, Reto, TestimonioSobre, Valor, PostBlog, Faq, SeoMeta, VideoDia } from './types';
+import type { PasoCamino, Reto, TestimonioSobre, Valor, PostBlog, Faq, SeoMeta, VideoDia, CategoriaTienda } from './types';
 
 export const FRASE_FIRMA = 'Anímate, atrévate, acompáñame y comparte';
 
@@ -201,6 +201,41 @@ export const BLOG_POSTS: PostBlog[] = [
   },
 ];
 
+export const AMAZON_ESCAPARATE_LINK = 'https://amzn.eu/d/0bygwsR8';
+
+export const CATEGORIAS_TIENDA: CategoriaTienda[] = [
+  {
+    id: 'ropa',
+    nombre: 'Ropa deportiva',
+    icono: 'shirt',
+    descripcion: 'Lo que uso yo misma para entrenar: cómoda, fresca y que aguanta cada rutina.',
+  },
+  {
+    id: 'mancuernas',
+    nombre: 'Mancuernas',
+    icono: 'dumbbell',
+    descripcion: 'Sets ligeros, perfectos para empezar a ganar fuerza en casa sin agobiarte.',
+  },
+  {
+    id: 'ligas',
+    nombre: 'Ligas de resistencia',
+    icono: 'activity',
+    descripcion: 'Mi herramienta favorita para tonificar piernas y brazos sin cargar peso.',
+  },
+  {
+    id: 'facial',
+    nombre: 'Cuidado facial',
+    icono: 'sparkles',
+    descripcion: 'Los productos que uso a diario para cuidar mi piel, dentro y fuera del entrenamiento.',
+  },
+  {
+    id: 'manualidades',
+    nombre: 'Manualidades',
+    icono: 'scissors',
+    descripcion: 'Ideas para esos ratitos de calma, lejos de las pantallas.',
+  },
+];
+
 export const SEO_PAGINAS: Record<string, SeoMeta> = {
   home: {
     title: 'La Nani Fitness — Ejercicio en casa para mujeres +60',
@@ -231,5 +266,10 @@ export const SEO_PAGINAS: Record<string, SeoMeta> = {
     title: 'Bienvenida al reto — La Nani Fitness',
     description: 'Tu acceso al Reto Vuelvo a Moverme está listo. Empecemos.',
     path: '/gracias-reto',
+  },
+  tienda: {
+    title: 'Mi tienda recomendada — La Nani Fitness',
+    description: 'Lo que uso de verdad: ropa deportiva, mancuernas, ligas y cuidado facial, en mi escaparate de Amazon.',
+    path: '/tienda',
   },
 };

@@ -8,6 +8,8 @@ import SobrePage from './pages/SobrePage';
 import BlogPage from './pages/BlogPage';
 import BlogPost from './sections/BlogPost';
 import ContactoPage from './pages/ContactoPage';
+import GraciasRetoPage from './pages/GraciasRetoPage';
+import TiendaPage from './pages/TiendaPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function ScrollToTop() {
@@ -31,6 +33,8 @@ export default function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contacto" element={<ContactoPage />} />
+          <Route path="/gracias-reto" element={<GraciasRetoPage />} />
+          <Route path="/tienda" element={<TiendaPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

@@ -62,6 +62,13 @@ export interface Faq {
   respuesta: string;
 }
 
+export interface CategoriaTienda {
+  id: string;
+  nombre: string;
+  icono: 'shirt' | 'dumbbell' | 'activity' | 'sparkles' | 'scissors';
+  descripcion: string;
+}
+
 export interface SeoMeta {
   title: string;
   description: string;
