@@ -35,11 +35,11 @@ export default function Sobre({ variant = 'full' }: Props) {
                 <h1>Tengo 65 años y esta es mi forma de ayudarte a vivir mejor</h1>
                 <p className={styles.lead}>
                   No busco un cuerpo de revista, y el tuyo tampoco tiene que serlo. Busco que
-                  subas las escaleras sin quedarte sin aire, que juegues con tus nietos sin miedo
-                  a caerte, que tengas la energía para disfrutar cada día. Empecé grabando rutinas
-                  cortas para mi propia familia, en Venezuela. Hoy, desde España, acompaño a una
-                  comunidad enorme de mujeres +60 que decidieron que la edad no define lo que
-                  pueden hacer con su cuerpo.
+                  subas las escaleras sin quedarte sin aire, que tengas la energía para disfrutar
+                  cada día. Tengo 6 nietos y la fortuna de tenerlos cerca — gracias a mantenerme
+                  activa y motivada, puedo estar con ellos y disfrutarlos de verdad. Hoy, desde
+                  España, acompaño a una comunidad enorme de mujeres +60 que decidieron que la
+                  edad no define lo que pueden hacer con su cuerpo.
                 </p>
               </header>
             </div>
