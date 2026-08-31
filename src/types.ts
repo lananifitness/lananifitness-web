@@ -67,6 +67,7 @@ export interface CategoriaTienda {
   nombre: string;
   icono: 'shirt' | 'dumbbell' | 'activity' | 'sparkles' | 'scissors';
   descripcion: string;
+  link: string;
 }
 
 export interface RedSocial {

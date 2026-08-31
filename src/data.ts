@@ -209,30 +209,35 @@ export const CATEGORIAS_TIENDA: CategoriaTienda[] = [
     nombre: 'Ropa deportiva',
     icono: 'shirt',
     descripcion: 'Lo que uso yo misma para entrenar: cómoda, fresca y que aguanta cada rutina.',
+    link: 'https://amzn.eu/d/0fogmxBz',
   },
   {
     id: 'mancuernas',
     nombre: 'Mancuernas',
     icono: 'dumbbell',
     descripcion: 'Sets ligeros, perfectos para empezar a ganar fuerza en casa sin agobiarte.',
+    link: 'https://amzn.eu/d/0aTV7Xhd',
   },
   {
     id: 'ligas',
     nombre: 'Ligas de resistencia',
     icono: 'activity',
     descripcion: 'Mi herramienta favorita para tonificar piernas y brazos sin cargar peso.',
+    link: 'https://amzn.eu/d/00QQXtc1',
   },
   {
     id: 'facial',
     nombre: 'Cuidado facial',
     icono: 'sparkles',
     descripcion: 'Los productos que uso a diario para cuidar mi piel, dentro y fuera del entrenamiento.',
+    link: 'https://amzn.eu/d/02TrSGMi',
   },
   {
     id: 'manualidades',
     nombre: 'Manualidades',
     icono: 'scissors',
     descripcion: 'Ideas para esos ratitos de calma, lejos de las pantallas.',
+    link: 'https://amzn.eu/d/033yqcnR',
   },
 ];
 

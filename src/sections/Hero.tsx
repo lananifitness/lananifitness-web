@@ -38,7 +38,7 @@ export default function Hero() {
           {CAMINO.map((paso, i) => (
             <li
               key={paso.id}
-              className={`reveal ${styles.paso} ${styles[`color${i % 4}`]}`}
+              className={`reveal ${styles.paso}`}
               style={{ transitionDelay: `${i * 90}ms` }}
             >
               <span className={styles.numero}>{paso.numero}</span>
