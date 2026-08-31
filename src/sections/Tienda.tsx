@@ -36,7 +36,7 @@ export default function Tienda() {
             return (
               <a
                 key={cat.id}
-                href={AMAZON_ESCAPARATE_LINK}
+                href={cat.link}
                 target="_blank"
                 rel="noopener noreferrer nofollow sponsored"
                 className={`reveal ${styles.card} ${colorClass}`}
