@@ -246,7 +246,7 @@ export const REDES_SOCIALES: RedSocial[] = [
     id: 'instagram',
     nombre: 'Instagram',
     icono: 'instagram',
-    seguidores: '480 mil',
+    seguidores: '428 mil',
     link: 'https://www.instagram.com/lananifitness',
   },
   {
