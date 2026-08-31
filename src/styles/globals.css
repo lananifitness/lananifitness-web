@@ -44,6 +44,17 @@
   color-scheme: light;
 }
 
+/* Espaciado de sección reducido en móvil: --space-4/5/6 se usan para
+   padding/margin de secciones completas en todo el sitio, y el valor de
+   escritorio (40/64/96px) deja demasiado aire vacío en pantallas chicas. */
+@media (max-width: 640px) {
+  :root {
+    --space-4: 28px;
+    --space-5: 40px;
+    --space-6: 56px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

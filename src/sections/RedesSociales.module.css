@@ -48,6 +48,12 @@
   font-weight: 600;
 }
 
+@media (max-width: 1024px) {
+  .stat {
+    padding: 0 var(--space-4);
+  }
+}
+
 @media (max-width: 640px) {
   .row {
     flex-wrap: wrap;

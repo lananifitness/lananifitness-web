@@ -19,7 +19,7 @@
 
 .top {
   position: relative;
-  padding-bottom: clamp(32px, 6vw, 56px);
+  padding-bottom: clamp(40px, 6vw, 64px);
 }
 
 .copy {
@@ -89,7 +89,7 @@
 }
 
 .camino {
-  margin-top: clamp(24px, 5vw, var(--space-6));
+  margin-top: clamp(32px, 5vw, var(--space-6));
   padding-bottom: var(--space-6);
 }
 
