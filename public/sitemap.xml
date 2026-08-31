@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lananifitness.github.io/</loc>
+    <loc>https://lananifitness.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lananifitness.github.io/retos</loc>
+    <loc>https://lananifitness.com/retos</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lananifitness.github.io/sobre</loc>
+    <loc>https://lananifitness.com/sobre</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lananifitness.github.io/blog</loc>
+    <loc>https://lananifitness.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lananifitness.github.io/contacto</loc>
+    <loc>https://lananifitness.com/blog/fortalecer-piernas-despues-de-los-60</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lananifitness.com/blog/miedo-a-empezar-a-hacer-ejercicio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lananifitness.com/blog/combatir-la-soledad-moviendote</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lananifitness.com/tienda</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lananifitness.com/contacto</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

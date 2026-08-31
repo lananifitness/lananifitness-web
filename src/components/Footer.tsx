@@ -1,5 +1,6 @@
 import { Instagram, Youtube, Facebook } from 'lucide-react';
 import { FRASE_FIRMA } from '../data';
+import TikTokIcon from './TikTokIcon';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -39,6 +40,14 @@ export default function Footer() {
               aria-label="Facebook de La Nani Fitness"
             >
               <Facebook size={22} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@lananifitness"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok de La Nani Fitness"
+            >
+              <TikTokIcon size={22} />
             </a>
           </div>
         </div>

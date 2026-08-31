@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import type { SeoMeta } from '../types';
 import { useCanonical } from './useCanonical';
 
-const SITE_URL = 'https://lananifitness.github.io';
+const SITE_URL = 'https://lananifitness.com';
 const SITE_NAME = 'La Nani Fitness';
 const OG_IMAGE = `${SITE_URL}/og-cover.jpg`;
 

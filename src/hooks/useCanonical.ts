@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const SITE_URL = 'https://lananifitness.github.io';
+const SITE_URL = 'https://lananifitness.com';
 
 /**
  * Inserta/actualiza <link rel="canonical"> según la ruta actual.
