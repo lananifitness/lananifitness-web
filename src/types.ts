@@ -78,6 +78,11 @@ export interface RedSocial {
   link: string;
 }
 
+export interface ReelInstagram {
+  id: string;
+  url: string;
+}
+
 export interface SeoMeta {
   title: string;
   description: string;

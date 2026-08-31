@@ -1,4 +1,4 @@
-import type { PasoCamino, Reto, TestimonioSobre, Valor, PostBlog, Faq, SeoMeta, VideoDia, CategoriaTienda, RedSocial } from './types';
+import type { PasoCamino, Reto, TestimonioSobre, Valor, PostBlog, Faq, SeoMeta, VideoDia, CategoriaTienda, RedSocial, ReelInstagram } from './types';
 
 export const FRASE_FIRMA = 'Anímate, atrévate, acompáñame y comparte';
 
@@ -239,6 +239,13 @@ export const CATEGORIAS_TIENDA: CategoriaTienda[] = [
     descripcion: 'Ideas para esos ratitos de calma, lejos de las pantallas.',
     link: 'https://amzn.eu/d/033yqcnR',
   },
+];
+
+export const REELS_INSTAGRAM: ReelInstagram[] = [
+  { id: 'reel1', url: 'https://www.instagram.com/reel/DM0GaX-tdKw/' },
+  { id: 'reel2', url: 'https://www.instagram.com/reel/C4fwkIGIEjD/' },
+  { id: 'reel3', url: 'https://www.instagram.com/reel/C5-rI2LNwZF/' },
+  { id: 'reel4', url: 'https://www.instagram.com/reel/Db22Z_dN8Av/' },
 ];
 
 export const REDES_SOCIALES: RedSocial[] = [
