@@ -242,10 +242,10 @@ export const CATEGORIAS_TIENDA: CategoriaTienda[] = [
 ];
 
 export const REELS_INSTAGRAM: ReelInstagram[] = [
-  { id: 'reel1', url: 'https://www.instagram.com/reel/DM0GaX-tdKw/' },
-  { id: 'reel2', url: 'https://www.instagram.com/reel/C4fwkIGIEjD/' },
-  { id: 'reel3', url: 'https://www.instagram.com/reel/C5-rI2LNwZF/' },
-  { id: 'reel4', url: 'https://www.instagram.com/reel/Db22Z_dN8Av/' },
+  { id: 'video1', url: 'https://youtu.be/BN9zTilPoA4' },
+  { id: 'video2', url: 'https://youtu.be/sgeir4eWnP0' },
+  { id: 'video3', url: 'https://youtu.be/ZCAUdjTbbYg' },
+  { id: 'video4', url: 'https://youtu.be/_byKR_Om3MM' },
 ];
 
 export const REDES_SOCIALES: RedSocial[] = [

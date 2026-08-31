@@ -1,11 +1,16 @@
-import { Instagram } from 'lucide-react';
+import { Youtube } from 'lucide-react';
 import { REELS_INSTAGRAM } from '../data';
 import { useReveal } from '../hooks/useReveal';
 import styles from './ReelsInstagram.module.css';
 
 function extraerId(url: string): string {
-  const match = url.match(/\/reel\/([^/?]+)/);
-  return match ? match[1] : '';
+  const watch = url.match(/[?&]v=([^&]+)/);
+  if (watch) return watch[1];
+  const corto = url.match(/youtu\.be\/([^?&]+)/);
+  if (corto) return corto[1];
+  const shorts = url.match(/\/shorts\/([^?&]+)/);
+  if (shorts) return shorts[1];
+  return '';
 }
 
 export default function ReelsInstagram() {
@@ -22,27 +27,33 @@ export default function ReelsInstagram() {
         </header>
 
         <div className={styles.carrusel}>
-          {REELS_INSTAGRAM.map((reel) => (
-            <div key={reel.id} className={`reveal ${styles.tarjeta}`}>
-              <iframe
-                src={`https://www.instagram.com/reel/${extraerId(reel.url)}/embed`}
-                title="Reel de La Nani Fitness"
-                loading="lazy"
-                allowTransparency
-                className={styles.iframe}
-              />
-            </div>
-          ))}
+          {REELS_INSTAGRAM.map((video, i) => {
+            const colorClass = styles[`color${i % 4}`];
+            return (
+              <div key={video.id} className={`reveal ${styles.tarjeta} ${colorClass}`}>
+                <div className={styles.marco}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${extraerId(video.url)}`}
+                    title="Video de La Nani Fitness"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className={styles.iframe}
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         <a
-          href="https://www.instagram.com/lananifitness"
+          href="https://www.youtube.com/@lananifitness"
           target="_blank"
           rel="noopener noreferrer"
           className={`reveal ${styles.verMas}`}
         >
-          <Instagram size={20} />
-          Ver más en Instagram
+          <Youtube size={20} />
+          Ver más en YouTube
         </a>
       </div>
     </section>

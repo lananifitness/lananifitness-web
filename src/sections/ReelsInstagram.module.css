@@ -35,7 +35,7 @@
 
 .tarjeta {
   flex: 0 0 auto;
-  width: min(300px, 80vw);
+  width: min(360px, 85vw);
   scroll-snap-align: start;
   border-radius: var(--radius-lg);
   padding: 10px;
@@ -65,13 +65,19 @@
 }
 
 .marco {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
   border-radius: calc(var(--radius-lg) - 6px);
   overflow: hidden;
 }
 
 .iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 560px;
+  height: 100%;
   border: none;
   display: block;
 }
