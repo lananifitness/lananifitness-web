@@ -5,6 +5,22 @@ import { useReveal } from '../hooks/useReveal';
 import { useSEO } from '../hooks/useSEO';
 import styles from './BlogPost.module.css';
 
+const DIAS_SEMANA = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+
+function renderParrafo(parrafo: string, key: number) {
+  const dia = DIAS_SEMANA.find((d) => parrafo.startsWith(`${d}:`));
+  if (dia) {
+    const resto = parrafo.slice(dia.length + 1);
+    return (
+      <p key={key} className={styles.parrafoDia}>
+        <span className={styles.etiquetaDia}>{dia}</span>
+        {resto}
+      </p>
+    );
+  }
+  return <p key={key}>{parrafo}</p>;
+}
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const ref = useReveal<HTMLDivElement>();
@@ -48,9 +64,7 @@ export default function BlogPost() {
         </div>
 
         <div className={`reveal ${styles.cuerpo}`}>
-          {post.contenido.map((parrafo, i) => (
-            <p key={i}>{parrafo}</p>
-          ))}
+          {post.contenido.map((parrafo, i) => renderParrafo(parrafo, i))}
         </div>
 
         <div className={`reveal ${styles.volver}`}>
