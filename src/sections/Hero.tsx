@@ -17,8 +17,9 @@ export default function Hero() {
             para <span>volver a moverte</span>
           </h1>
           <p className={styles.lead}>
-            Rutinas seguras en casa para fortalecer piernas, cuidar tu equilibrio y devolverte la
-            energía.
+            Rutinas seguras en casa, pensadas para mujeres +60. No buscamos adelgazar ni un
+            cuerpo perfecto: buscamos que fortalezcas tus piernas, cuides tu equilibrio y
+            recuperes la energía para disfrutar cada día.
           </p>
           <div className={styles.actions}>
             <Link to="/retos" className={styles.primaryCta}>
