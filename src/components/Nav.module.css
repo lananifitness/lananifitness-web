@@ -5,14 +5,13 @@
   max-width: 1300px;
   margin: 0 auto;
   border-radius: var(--radius-lg);
-  background: linear-gradient(120deg, rgba(232, 48, 90, 0.92) 0%, rgba(240, 122, 48, 0.92) 100%);
-  backdrop-filter: blur(10px);
+  background: var(--color-cream);
+  border-bottom: 1px solid var(--color-line);
   box-shadow: var(--shadow-soft);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .headerScrolled {
-  background: linear-gradient(120deg, rgba(232, 48, 90, 0.6) 0%, rgba(240, 122, 48, 0.6) 100%);
   box-shadow: var(--shadow-lift);
 }
 
@@ -46,7 +45,7 @@
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--color-ink);
   cursor: pointer;
   padding: 8px;
 }
@@ -74,7 +73,7 @@
 .link {
   font-weight: 600;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-ink-soft);
   font-size: 17px;
   padding: 6px 2px;
   border-bottom: 3px solid transparent;
@@ -82,17 +81,17 @@
 }
 
 .link:hover {
-  color: #fff;
+  color: var(--color-pink);
 }
 
 .linkActive {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: var(--color-pink);
+  border-bottom-color: var(--color-orange);
 }
 
 .cta {
-  background: var(--color-white);
-  color: var(--color-pink);
+  background: var(--gradient-brand);
+  color: #fff;
   text-decoration: none;
   font-weight: 700;
   padding: 12px 22px;
