@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <ReelsInstagram />
       <RedesSociales />
       <Retos variant="preview" />
-      <ReelsInstagram />
       <Sobre variant="preview" />
       <Blog variant="preview" />
     </>
