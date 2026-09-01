@@ -25,7 +25,7 @@ export default function Blog({ variant = 'full' }: Props) {
       <div className="container">
         <header className={`reveal ${styles.header}`}>
           <p className={styles.eyebrow}>{variant === 'full' ? 'Mi blog' : 'Últimos consejos'}</p>
-          {variant === 'full' && <h1>Consejos para moverte con seguridad</h1>}
+          {variant === 'full' && <h1>Rutinas, comida y motivación para moverte cada día</h1>}
         </header>
 
         <div className={styles.grid}>

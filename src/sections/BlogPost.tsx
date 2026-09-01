@@ -8,14 +8,25 @@ import styles from './BlogPost.module.css';
 const DIAS_SEMANA = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 
 function renderParrafo(parrafo: string, key: number) {
-  const dia = DIAS_SEMANA.find((d) => parrafo.startsWith(`${d}:`));
+  const dia = DIAS_SEMANA.find((d) => parrafo.startsWith(`${d}||`));
   if (dia) {
-    const resto = parrafo.slice(dia.length + 1);
+    const comidas = parrafo.split('||').slice(1);
     return (
-      <p key={key} className={styles.parrafoDia}>
-        <span className={styles.etiquetaDia}>{dia}</span>
-        {resto}
-      </p>
+      <div key={key} className={styles.diaBloque}>
+        <p className={styles.etiquetaDia}>{dia}</p>
+        <ul className={styles.comidas}>
+          {comidas.map((linea, j) => {
+            const separador = linea.indexOf(':');
+            const tipo = linea.slice(0, separador);
+            const resto = linea.slice(separador + 1).trim();
+            return (
+              <li key={j}>
+                <strong>{tipo}:</strong> {resto}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     );
   }
   return <p key={key}>{parrafo}</p>;
