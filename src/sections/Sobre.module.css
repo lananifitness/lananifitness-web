@@ -1,6 +1,5 @@
 .section {
   padding: var(--space-6) 0;
-  background: var(--color-pink-tint);
 }
 
 .headerConFoto {
@@ -123,30 +122,55 @@
 }
 
 .cita {
+  position: relative;
   margin: 0;
-  background: var(--color-white);
-  border-left: 6px solid var(--color-orange);
   border-radius: var(--radius-md);
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
+  color: #fff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cita:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-4px);
+}
+
+.citaColor0 {
+  background: var(--color-pink);
+}
+
+.citaColor1 {
+  background: var(--color-orange);
+}
+
+.citaColor2 {
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
 }
 
 .cita p {
   font-size: 19px;
-  color: var(--color-ink);
+  color: #fff;
   font-style: italic;
 }
 
 .cita footer {
   margin-top: var(--space-2);
   font-size: 15px;
-  color: var(--color-ink-soft);
+  color: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
 .logro {
-  color: var(--color-pink);
-  font-weight: 600;
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 4px;
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
 }

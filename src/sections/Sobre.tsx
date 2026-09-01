@@ -64,15 +64,18 @@ export default function Sobre({ variant = 'full' }: Props) {
         )}
 
         <div className={styles.testimonios}>
-          {testimonios.map((t) => (
-            <blockquote key={t.id} className={`reveal ${styles.cita}`}>
-              <p>&ldquo;{t.cita}&rdquo;</p>
-              <footer>
-                <strong>{t.nombre}</strong>, {t.edad} años — {t.ciudad}
-                <span className={styles.logro}>{t.logro}</span>
-              </footer>
-            </blockquote>
-          ))}
+          {testimonios.map((t, i) => {
+            const colorClass = styles[`citaColor${i % 3}`];
+            return (
+              <blockquote key={t.id} className={`reveal ${styles.cita} ${colorClass}`}>
+                <p>&ldquo;{t.cita}&rdquo;</p>
+                <footer>
+                  <strong>{t.nombre}</strong>, {t.edad} años — {t.ciudad}
+                  <span className={styles.logro}>{t.logro}</span>
+                </footer>
+              </blockquote>
+            );
+          })}
         </div>
       </div>
     </section>
