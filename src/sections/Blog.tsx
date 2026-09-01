@@ -18,7 +18,10 @@ function formatearFecha(iso: string): string {
 
 export default function Blog({ variant = 'full' }: Props) {
   const ref = useReveal<HTMLDivElement>();
-  const posts = variant === 'preview' ? BLOG_POSTS.slice(0, 3) : BLOG_POSTS;
+  const ordenados = [...BLOG_POSTS].sort(
+    (a, b) => new Date(b.fecha).getTime() - new Date(a.fecha).getTime()
+  );
+  const posts = variant === 'preview' ? ordenados.slice(0, 3) : ordenados;
 
   return (
     <section className={styles.section} ref={ref}>
