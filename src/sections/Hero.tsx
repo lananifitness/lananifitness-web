@@ -35,17 +35,20 @@ export default function Hero() {
       <div ref={ref} className={`container ${styles.camino}`}>
         <p className={`reveal ${styles.caminoLabel}`}>Así es nuestro camino juntas</p>
         <ol className={styles.pasos}>
-          {CAMINO.map((paso, i) => (
-            <li
-              key={paso.id}
-              className={`reveal ${styles.paso}`}
-              style={{ transitionDelay: `${i * 90}ms` }}
-            >
-              <span className={styles.numero}>{paso.numero}</span>
-              <h3>{paso.verbo}</h3>
-              <p>{paso.titulo}</p>
-            </li>
-          ))}
+          {CAMINO.map((paso, i) => {
+            const colorClass = styles[`color${i % 4}`];
+            return (
+              <li
+                key={paso.id}
+                className={`reveal ${styles.paso} ${colorClass}`}
+                style={{ transitionDelay: `${i * 90}ms` }}
+              >
+                <span className={styles.numeroFondo}>{paso.numero}</span>
+                <h3>{paso.verbo}</h3>
+                <p>{paso.titulo}</p>
+              </li>
+            );
+          })}
         </ol>
       </div>
     </section>
