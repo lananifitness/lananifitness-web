@@ -1,6 +1,6 @@
 import { Instagram, Youtube, Facebook } from 'lucide-react';
-import { FRASE_FIRMA } from '../data';
 import TikTokIcon from './TikTokIcon';
+import { FRASE_FIRMA } from '../data';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -8,9 +8,9 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
         <div>
-          <p className={styles.logo}>
-            La Nani <span>Fitness</span>
-          </p>
+          <div className={styles.logoWrap}>
+            <img src="/logo.png" alt="La Nani Fitness" className={styles.logoImg} />
+          </div>
           <p className={styles.frase}>{FRASE_FIRMA}</p>
         </div>
 
@@ -57,6 +57,7 @@ export default function Footer() {
           <a href="/retos">Retos</a>
           <a href="/sobre">Sobre mí</a>
           <a href="/blog">Blog</a>
+          <a href="/tienda">Tienda</a>
           <a href="/contacto">Contacto</a>
         </div>
       </div>

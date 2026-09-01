@@ -13,17 +13,23 @@
 }
 
 .logoWrap {
-  display: inline-flex;
-  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: var(--space-3);
+  box-shadow: var(--shadow-soft);
 }
 
 .logoImg {
-  width: 64px;
-  height: 64px;
-  padding: 4px;
-  background: var(--color-white);
-  border-radius: 50%;
-  box-shadow: var(--shadow-soft);
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .frase {
