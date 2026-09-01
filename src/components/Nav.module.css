@@ -5,7 +5,7 @@
   max-width: 1300px;
   margin: 0 auto;
   border-radius: var(--radius-lg);
-  background: var(--color-cream);
+  background: var(--gradient-brand);
   border-bottom: 1px solid var(--color-line);
   box-shadow: var(--shadow-soft);
   transition: box-shadow 0.3s ease;
@@ -45,7 +45,7 @@
   display: none;
   background: none;
   border: none;
-  color: var(--color-ink);
+  color: #fff;
   cursor: pointer;
   padding: 8px;
 }
@@ -73,7 +73,7 @@
 .link {
   font-weight: 600;
   text-decoration: none;
-  color: var(--color-ink-soft);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 17px;
   padding: 6px 2px;
   border-bottom: 3px solid transparent;
@@ -81,17 +81,17 @@
 }
 
 .link:hover {
-  color: var(--color-pink);
+  color: #fff;
 }
 
 .linkActive {
-  color: var(--color-pink);
-  border-bottom-color: var(--color-orange);
+  color: #fff;
+  border-bottom-color: #fff;
 }
 
 .cta {
-  background: var(--gradient-brand);
-  color: #fff;
+  background: var(--color-white);
+  color: var(--color-pink);
   text-decoration: none;
   font-weight: 700;
   padding: 12px 22px;
