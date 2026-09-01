@@ -61,6 +61,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--color-cream);
 }
 
 @media (prefers-reduced-motion: reduce) {
