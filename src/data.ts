@@ -156,7 +156,7 @@ export const BLOG_POSTS: PostBlog[] = [
     titulo: 'Cómo fortalecer las piernas después de los 60 sin lastimarte',
     resumen: 'Tres ejercicios sencillos que puedes hacer en casa, con una silla, para ganar fuerza y seguridad al caminar.',
     categoria: 'Fuerza y equilibrio',
-    fecha: '2026-08-10',
+    fecha: '2026-08-26',
     minutosLectura: 4,
     imagen: '/blog/piernas-fuertes.jpg',
     contenido: [
@@ -173,7 +173,7 @@ export const BLOG_POSTS: PostBlog[] = [
     titulo: 'Si tienes miedo a empezar a hacer ejercicio a los 60, lee esto',
     resumen: 'El miedo a lastimarte o a "no poder" es el motivo número uno por el que muchas mujeres no empiezan. Aquí te cuento cómo lo trabajamos juntas.',
     categoria: 'Motivación',
-    fecha: '2026-07-22',
+    fecha: '2026-08-26',
     minutosLectura: 3,
     imagen: '/blog/miedo-a-empezar.jpg',
     contenido: [
@@ -189,7 +189,7 @@ export const BLOG_POSTS: PostBlog[] = [
     titulo: 'Cómo combatir la soledad moviéndote (y por qué la comunidad importa)',
     resumen: 'El ejercicio no solo fortalece el cuerpo. Te cuento por qué crear comunidad ha sido tan importante en este camino.',
     categoria: 'Comunidad',
-    fecha: '2026-06-30',
+    fecha: '2026-08-26',
     minutosLectura: 3,
     imagen: '/blog/comunidad.jpg',
     contenido: [
@@ -206,7 +206,7 @@ export const BLOG_POSTS: PostBlog[] = [
     resumen:
       'Un menú semanal sencillo, con alimentos de verdad, para bajar la inflamación y sentirte más ligera y con más energía.',
     categoria: 'Nutrición',
-    fecha: '2026-08-20',
+    fecha: '2026-09-01',
     minutosLectura: 6,
     imagen: '/blog/dieta-antiinflamatoria.jpg',
     contenido: [
@@ -229,7 +229,7 @@ export const BLOG_POSTS: PostBlog[] = [
     resumen:
       'Un menú de 7 días pensado para conservar tu fuerza y tu músculo, con proteína en cada comida y sin complicarte la vida.',
     categoria: 'Nutrición',
-    fecha: '2026-08-24',
+    fecha: '2026-09-01',
     minutosLectura: 6,
     imagen: '/blog/dieta-masa-muscular.jpg',
     contenido: [
@@ -252,7 +252,7 @@ export const BLOG_POSTS: PostBlog[] = [
     resumen:
       'Un menú de 7 días con alimentos que ayudan a calmar el estrés desde dentro, para acompañar tus rutinas de movimiento.',
     categoria: 'Nutrición',
-    fecha: '2026-08-28',
+    fecha: '2026-09-01',
     minutosLectura: 6,
     imagen: '/blog/dieta-anti-estres.jpg',
     contenido: [
