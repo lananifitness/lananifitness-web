@@ -246,6 +246,7 @@ export const REELS_INSTAGRAM: ReelInstagram[] = [
   { id: 'video2', url: 'https://youtu.be/sgeir4eWnP0' },
   { id: 'video3', url: 'https://youtu.be/ZCAUdjTbbYg' },
   { id: 'video4', url: 'https://youtu.be/_byKR_Om3MM' },
+  { id: 'video5', url: 'https://youtu.be/n4uFexY3EF0' },
 ];
 
 export const REDES_SOCIALES: RedSocial[] = [
