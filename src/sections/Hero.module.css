@@ -17,9 +17,9 @@
   filter: blur(10px);
 }
 
-.top {
+.hero .top {
   position: relative;
-  padding-bottom: clamp(64px, 9vw, 96px);
+  padding-bottom: clamp(40px, 6vw, 64px);
 }
 
 .copy {
@@ -88,9 +88,9 @@
   color: var(--color-pink-text);
 }
 
-.camino {
-  margin-top: var(--space-6);
-  padding-top: var(--space-5);
+.hero .camino {
+  margin-top: 0;
+  padding-top: clamp(32px, 5vw, 56px);
   padding-bottom: var(--space-6);
   border-top: 1px solid var(--color-line);
 }
