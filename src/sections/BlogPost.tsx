@@ -34,13 +34,14 @@ function renderParrafo(parrafo: string, key: number) {
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
-  const ref = useReveal<HTMLDivElement>();
+  const ref = useReveal<HTMLDivElement>(slug);
   const post = BLOG_POSTS.find((p) => p.slug === slug);
 
   useSEO({
     title: post ? `${post.titulo} — La Nani Fitness` : 'Artículo no encontrado — La Nani Fitness',
     description: post ? post.resumen : 'Este artículo no existe o fue movido.',
     path: `/blog/${slug ?? ''}`,
+    noindex: !post,
   });
 
   if (!post) {
@@ -67,6 +68,7 @@ export default function BlogPost() {
               day: 'numeric',
               month: 'long',
               year: 'numeric',
+              timeZone: 'UTC',
             })}
           </span>
           <span className={styles.lectura}>

@@ -16,7 +16,7 @@
   align-items: center;
   gap: 2px;
   text-decoration: none;
-  color: var(--color-ink);
+  color: var(--color-on-brand);
   padding: 0 var(--space-5);
   position: relative;
 }

@@ -2,9 +2,7 @@ import { useEffect } from 'react';
 import type { SeoMeta } from '../types';
 import { useCanonical } from './useCanonical';
 
-const SITE_URL = 'https://lananifitness.com';
-const SITE_NAME = 'La Nani Fitness';
-const OG_IMAGE = `${SITE_URL}/og-cover.jpg`;
+import { metaTags, organization } from '../seo';
 
 function setMetaTag(attr: 'name' | 'property', key: string, content: string): void {
   let tag = document.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
@@ -37,29 +35,7 @@ export function useSEO(meta: SeoMeta): void {
   useEffect(() => {
     document.title = meta.title;
 
-    setMetaTag('name', 'description', meta.description);
-    setMetaTag('property', 'og:title', meta.title);
-    setMetaTag('property', 'og:description', meta.description);
-    setMetaTag('property', 'og:type', 'website');
-    setMetaTag('property', 'og:url', `${SITE_URL}${meta.path}`);
-    setMetaTag('property', 'og:image', OG_IMAGE);
-    setMetaTag('property', 'og:site_name', SITE_NAME);
-    setMetaTag('name', 'twitter:card', 'summary_large_image');
-    setMetaTag('name', 'twitter:title', meta.title);
-    setMetaTag('name', 'twitter:description', meta.description);
-
-    setJsonLd('ld-json-page', {
-      '@context': 'https://schema.org',
-      '@type': 'HealthAndBeautyBusiness',
-      name: SITE_NAME,
-      url: SITE_URL,
-      description:
-        'Rutinas de ejercicio en casa para mujeres mayores de 60 años, con acompañamiento personal y comunidad.',
-      image: OG_IMAGE,
-      sameAs: [
-        'https://www.instagram.com/lananifitness',
-        'https://www.youtube.com/@lananifitness',
-      ],
-    });
+    metaTags(meta).forEach(([attr, key, content]) => setMetaTag(attr, key, content));
+    setJsonLd('ld-json-page', organization);
   }, [meta]);
 }

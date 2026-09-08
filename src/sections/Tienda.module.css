@@ -9,7 +9,7 @@
 
 .eyebrow {
   font-weight: 700;
-  color: var(--color-orange);
+  color: var(--color-orange-text);
   font-size: 18px;
   margin-bottom: var(--space-1);
 }
@@ -22,7 +22,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: var(--space-3);
 }
 
@@ -35,7 +35,7 @@
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
   text-decoration: none;
-  color: #fff;
+  color: var(--color-on-brand);
   overflow: hidden;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -80,14 +80,14 @@
 .card h3 {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: var(--color-on-brand);
   font-size: 21px;
 }
 
 .card p {
   position: relative;
   z-index: 1;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-on-brand);
   font-size: 15px;
   flex-grow: 1;
 }
@@ -98,7 +98,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #fff;
+  color: var(--color-on-brand);
   font-weight: 700;
   font-size: 14px;
   margin-top: 4px;
@@ -116,7 +116,7 @@
   align-items: center;
   gap: 10px;
   background: var(--gradient-brand);
-  color: #fff;
+  color: var(--color-on-brand);
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;

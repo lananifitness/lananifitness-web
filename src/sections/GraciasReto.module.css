@@ -10,7 +10,7 @@
 
 .eyebrow {
   font-weight: 700;
-  color: var(--color-orange);
+  color: var(--color-orange-text);
   font-size: 18px;
   margin-bottom: var(--space-1);
 }
@@ -23,7 +23,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
   gap: var(--space-2);
   max-width: 900px;
   margin: 0 auto;
@@ -52,14 +52,14 @@
   right: 8px;
   background: none;
   border: none;
-  color: var(--color-line);
+  color: var(--color-ink-soft);
   cursor: pointer;
   padding: 2px;
   display: flex;
 }
 
 .cardHecho .check {
-  color: var(--color-orange);
+  color: var(--color-orange-text);
 }
 
 .diaLabel {
@@ -81,7 +81,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--color-pink);
+  color: var(--color-pink-text);
   text-decoration: none;
   font-weight: 700;
   font-size: 15px;
@@ -158,3 +158,19 @@
   height: 100%;
   border: none;
 }
+
+.modalFondo {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  padding-top: 68px;
+  overflow-y: auto;
+}
+.modalFondo:not([open]) { display: none; }
+.modalFondo::backdrop { background: transparent; }
+.check { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; top: 0; right: 0; }
+.link { min-height: 44px; }
+.diaLabel { padding: 0 28px; }

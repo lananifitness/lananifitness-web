@@ -1,11 +1,14 @@
 :root {
   /* Marca — La Nani Fitness */
   --color-pink: #e8305a;
+  --color-pink-text: #b91c43;
+  --color-orange-text: #a34312;
   --color-pink-light: #e8417a;
   --color-orange: #f07a30;
   --color-orange-light: #f0834a;
   --color-cream: #fff8f5;
   --color-ink: #331521;
+  --color-on-brand: #160910;
   --color-ink-soft: #5c3a48;
   --color-white: #ffffff;
   --color-line: #f0d9d0;
@@ -145,27 +148,46 @@ img {
 
 /* Foco de teclado visible, siempre */
 :focus-visible {
-  outline: 3px solid var(--color-orange);
+  outline: 3px solid var(--color-ink);
   outline-offset: 3px;
   border-radius: 6px;
 }
 
 /* Animación de aparición controlada por useReveal */
-.reveal {
+.reveal.reveal-pending {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.is-visible {
+.reveal, .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal.reveal-pending {
     opacity: 1;
     transform: none;
     transition: none;
   }
+}
+
+/* Mantener textos y tarjetas dentro de pantallas pequeñas. */
+h1, h2, h3, p, a { overflow-wrap: anywhere; }
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  transform: translateY(-200%);
+  padding: 12px 20px;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  border-radius: var(--radius-md);
+}
+.skip-link:focus { transform: translateY(0); }
+#contenido { scroll-margin-top: 140px; }
+@media (max-width: 640px) {
+  :root { --fs-h1: clamp(32px, 8vw, 52px); }
 }

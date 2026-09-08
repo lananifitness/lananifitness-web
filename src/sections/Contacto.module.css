@@ -9,7 +9,7 @@
 
 .eyebrow {
   font-weight: 700;
-  color: var(--color-pink);
+  color: var(--color-pink-text);
   font-size: 18px;
   margin-bottom: var(--space-1);
 }
@@ -22,7 +22,7 @@
 
 .canales {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: var(--space-3);
   margin-bottom: var(--space-6);
 }
@@ -36,7 +36,7 @@
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
   text-decoration: none;
-  color: #fff;
+  color: var(--color-on-brand);
   overflow: hidden;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -77,14 +77,14 @@
 .canal h3 {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: var(--color-on-brand);
   font-size: 20px;
 }
 
 .canal p {
   position: relative;
   z-index: 1;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-on-brand);
   font-size: 15px;
   margin-top: 2px;
 }
@@ -119,7 +119,7 @@
 
 .faq summary::before {
   content: '+';
-  color: var(--color-orange);
+  color: var(--color-orange-text);
   font-weight: 700;
   margin-right: 10px;
 }
@@ -133,3 +133,5 @@
   color: var(--color-ink-soft);
   font-size: 17px;
 }
+
+.canal > div { min-width: 0; }

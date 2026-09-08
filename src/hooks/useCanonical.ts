@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const SITE_URL = 'https://lananifitness.com';
+import { canonicalUrl } from '../seo';
 
 /**
  * Inserta/actualiza <link rel="canonical"> según la ruta actual.
@@ -8,7 +8,7 @@ const SITE_URL = 'https://lananifitness.com';
  */
 export function useCanonical(path: string): void {
   useEffect(() => {
-    const href = `${SITE_URL}${path === '/' ? '/' : path}`;
+    const href = canonicalUrl(path);
     let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
 
     if (!link) {

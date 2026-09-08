@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Instagram, Youtube, Facebook } from 'lucide-react';
 import TikTokIcon from './TikTokIcon';
 import { FRASE_FIRMA } from '../data';
@@ -9,7 +10,7 @@ export default function Footer() {
       <div className={`container ${styles.grid}`}>
         <div>
           <div className={styles.logoWrap}>
-            <img src="/logo.png" alt="La Nani Fitness" className={styles.logoImg} />
+            <img src="/logo.png" alt="La Nani Fitness" width={200} height={200} loading="lazy" decoding="async" className={styles.logoImg} />
           </div>
           <p className={styles.frase}>{FRASE_FIRMA}</p>
         </div>
@@ -54,11 +55,11 @@ export default function Footer() {
 
         <div className={styles.col}>
           <p className={styles.colTitle}>Explora</p>
-          <a href="/retos">Retos</a>
-          <a href="/sobre">Sobre mí</a>
-          <a href="/blog">Blog</a>
-          <a href="/tienda">Tienda</a>
-          <a href="/contacto">Contacto</a>
+          <Link to="/retos">Retos</Link>
+          <Link to="/sobre">Sobre mí</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/tienda">Tienda</Link>
+          <Link to="/contacto">Contacto</Link>
         </div>
       </div>
 

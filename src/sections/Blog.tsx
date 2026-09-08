@@ -13,6 +13,7 @@ function formatearFecha(iso: string): string {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
+              timeZone: 'UTC',
   });
 }
 

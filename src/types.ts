@@ -84,6 +84,7 @@ export interface ReelInstagram {
 }
 
 export interface SeoMeta {
+  noindex?: boolean;
   title: string;
   description: string;
   path: string;

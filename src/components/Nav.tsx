@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import styles from './Nav.module.css';
 
@@ -22,6 +22,9 @@ function enlaceClase({ isActive }: { isActive: boolean }): string {
 }
 
 export default function Nav() {
+  const { pathname } = useLocation();
+  const previousPath = useRef(pathname);
+  const toggleRef = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -32,10 +35,27 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    if (previousPath.current !== pathname) setOpen(false);
+    previousPath.current = pathname;
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [open]);
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       <div className={`container ${styles.bar}`}>
-        <nav className={styles.navIzquierda}>
+        <nav aria-label="Navegación principal" className={styles.navIzquierda}>
           {LINKS_IZQUIERDA.map((link) => (
             <NavLink key={link.to} to={link.to} end={link.to === '/'} className={enlaceClase}>
               {link.label}
@@ -47,7 +67,7 @@ export default function Nav() {
           <img src="/logo.png" alt="La Nani Fitness" width={200} height={200} />
         </NavLink>
 
-        <nav className={styles.navDerecha}>
+        <nav aria-label="Más secciones" className={styles.navDerecha}>
           {LINKS_DERECHA.map((link) => (
             <NavLink key={link.to} to={link.to} className={enlaceClase}>
               {link.label}
@@ -59,6 +79,9 @@ export default function Nav() {
         </nav>
 
         <button
+          ref={toggleRef}
+          type="button"
+          aria-controls="menu-movil"
           className={styles.toggle}
           aria-expanded={open}
           aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
@@ -67,7 +90,7 @@ export default function Nav() {
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        <nav className={`${styles.navMovil} ${open ? styles.navMovilOpen : ''}`}>
+        <nav id="menu-movil" aria-label="Navegación móvil" className={`${styles.navMovil} ${open ? styles.navMovilOpen : ''}`}>
           {LINKS.map((link) => (
             <NavLink
               key={link.to}

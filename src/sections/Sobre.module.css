@@ -35,7 +35,7 @@
 
 .eyebrow {
   font-weight: 700;
-  color: var(--color-pink);
+  color: var(--color-pink-text);
   font-size: 18px;
   margin-bottom: var(--space-1);
 }
@@ -48,7 +48,7 @@
 
 .valores {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: var(--space-3);
   margin-bottom: var(--space-6);
 }
@@ -58,7 +58,7 @@
   border-radius: var(--radius-lg);
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
-  color: #fff;
+  color: var(--color-on-brand);
   overflow: hidden;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -103,7 +103,7 @@
 .valor h3 {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: var(--color-on-brand);
   font-size: 21px;
   margin-bottom: 6px;
 }
@@ -111,13 +111,13 @@
 .valor p {
   position: relative;
   z-index: 1;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-on-brand);
   font-size: 16px;
 }
 
 .testimonios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--space-3);
 }
 
@@ -127,7 +127,7 @@
   border-radius: var(--radius-md);
   padding: var(--space-3);
   box-shadow: var(--shadow-soft);
-  color: #fff;
+  color: var(--color-on-brand);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
@@ -150,14 +150,14 @@
 
 .cita p {
   font-size: 19px;
-  color: #fff;
+  color: var(--color-on-brand);
   font-style: italic;
 }
 
 .cita footer {
   margin-top: var(--space-2);
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-on-brand);
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -168,7 +168,7 @@
   align-self: flex-start;
   margin-top: 4px;
   background: rgba(255, 255, 255, 0.22);
-  color: #fff;
+  color: var(--color-on-brand);
   font-weight: 700;
   font-size: 13px;
   padding: 3px 10px;

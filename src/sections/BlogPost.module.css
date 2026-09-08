@@ -9,7 +9,7 @@
 .categoria {
   display: inline-block;
   background: rgba(240, 122, 48, 0.14);
-  color: var(--color-orange);
+  color: var(--color-orange-text);
   font-weight: 700;
   font-size: 14px;
   padding: 4px 12px;
@@ -45,7 +45,7 @@
 .cuerpo p {
   font-size: 19px;
   line-height: 1.7;
-  color: var(--color-ink);
+  color: var(--color-on-brand);
 }
 
 .volver {
@@ -54,7 +54,7 @@
 
 .volver a {
   font-weight: 700;
-  color: var(--color-pink);
+  color: var(--color-pink-text);
   text-decoration: none;
   font-size: 18px;
 }
@@ -68,7 +68,9 @@
   display: block;
   font-family: var(--font-display);
   font-weight: 700;
-  color: var(--color-pink);
+  color: var(--color-pink-text);
   font-size: 17px;
   margin-bottom: 4px;
 }
+
+.meta { flex-wrap: wrap; }

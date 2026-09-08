@@ -4,10 +4,17 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './styles/globals.css';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const app = (
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
 );
+
+const root = document.getElementById('root') as HTMLElement;
+if (root.dataset.prerendered) {
+  ReactDOM.hydrateRoot(root, app);
+} else {
+  ReactDOM.createRoot(root).render(app);
+}

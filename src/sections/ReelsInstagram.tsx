@@ -1,4 +1,5 @@
-import { Youtube } from 'lucide-react';
+import { useState } from 'react';
+import { Youtube, Play } from 'lucide-react';
 import { REELS_INSTAGRAM } from '../data';
 import { useReveal } from '../hooks/useReveal';
 import styles from './ReelsInstagram.module.css';
@@ -14,6 +15,7 @@ function extraerId(url: string): string {
 }
 
 export default function ReelsInstagram() {
+  const [activeVideos, setActiveVideos] = useState<Set<string>>(() => new Set());
   const ref = useReveal<HTMLDivElement>();
 
   if (REELS_INSTAGRAM.length === 0) return null;
@@ -32,14 +34,24 @@ export default function ReelsInstagram() {
             return (
               <div key={video.id} className={`reveal ${styles.tarjeta} ${colorClass}`}>
                 <div className={styles.marco}>
-                  <iframe
-                    src={`https://www.youtube.com/embed/${extraerId(video.url)}`}
-                    title="Video de La Nani Fitness"
+                  {activeVideos.has(video.id) ? <iframe
+                    src={`https://www.youtube.com/embed/${extraerId(video.url)}?autoplay=1`}
+                    title={`Video ${i + 1} de La Nani Fitness`}
                     loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className={styles.iframe}
-                  />
+                  /> : (
+                    <button
+                      type="button"
+                      className={styles.portada}
+                      aria-label={`Reproducir video ${i + 1} de La Nani Fitness`}
+                      onClick={() => setActiveVideos(previous => new Set(previous).add(video.id))}
+                    >
+                      <img src={`https://i.ytimg.com/vi/${extraerId(video.url)}/hqdefault.jpg`} alt="" width={480} height={360} loading="lazy" decoding="async" />
+                      <span className={styles.play}><Play size={24} aria-hidden="true" /> Reproducir</span>
+                    </button>
+                  )}
                 </div>
               </div>
             );

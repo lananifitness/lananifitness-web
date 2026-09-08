@@ -48,7 +48,7 @@
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--color-on-brand);
   cursor: pointer;
   padding: 8px;
 }
@@ -76,7 +76,7 @@
 .link {
   font-weight: 600;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-on-brand);
   font-size: 17px;
   padding: 6px 2px;
   border-bottom: 3px solid transparent;
@@ -84,17 +84,17 @@
 }
 
 .link:hover {
-  color: #fff;
+  color: var(--color-on-brand);
 }
 
 .linkActive {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: var(--color-on-brand);
+  border-bottom-color: var(--color-on-brand);
 }
 
 .cta {
   background: var(--color-white);
-  color: var(--color-pink);
+  color: var(--color-pink-text);
   text-decoration: none;
   font-weight: 700;
   padding: 12px 22px;
@@ -109,7 +109,7 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1050px) {
   .bar {
     position: relative;
     justify-content: flex-end;
@@ -149,13 +149,17 @@
     align-items: stretch;
     gap: 0;
     border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    visibility: hidden;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
 
   .navMovilOpen {
-    max-height: 420px;
+    visibility: visible;
+    max-height: calc(100dvh - 100px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     box-shadow: var(--shadow-lift);
   }
 
@@ -164,12 +168,12 @@
   }
 
   .navMovil .link:hover {
-    color: var(--color-pink);
+    color: var(--color-pink-text);
   }
 
   .navMovil .linkActive {
-    color: var(--color-pink);
-    border-bottom-color: var(--color-orange);
+    color: var(--color-pink-text);
+    border-bottom-color: var(--color-orange-text);
   }
 
   .link,
@@ -181,7 +185,7 @@
 
   .cta {
     background: var(--gradient-brand);
-    color: #fff;
+    color: var(--color-on-brand);
     margin: var(--space-2) var(--space-3);
     border-radius: var(--radius-pill);
   }

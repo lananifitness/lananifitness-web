@@ -6,6 +6,7 @@ export default function NotFoundPage() {
     title: 'Página no encontrada — La Nani Fitness',
     description: 'La página que buscas no existe.',
     path: '/404',
+    noindex: true,
   });
 
   return (

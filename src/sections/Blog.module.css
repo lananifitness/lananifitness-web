@@ -9,13 +9,13 @@
 
 .eyebrow {
   font-weight: 700;
-  color: var(--color-pink);
+  color: var(--color-pink-text);
   font-size: 18px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--space-3);
 }
 
@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: #fff;
+  color: var(--color-on-brand);
   text-decoration: none;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -56,7 +56,7 @@
   display: inline-block;
   align-self: flex-start;
   background: rgba(255, 255, 255, 0.22);
-  color: #fff;
+  color: var(--color-on-brand);
   font-weight: 700;
   font-size: 14px;
   padding: 4px 12px;
@@ -64,19 +64,19 @@
 }
 
 .card h3 {
-  color: #fff;
+  color: var(--color-on-brand);
   font-size: 22px;
 }
 
 .resumen {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-on-brand);
   font-size: 16px;
 }
 
 .meta {
   display: flex;
   justify-content: space-between;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-on-brand);
   font-size: 14px;
   margin-top: auto;
 }
@@ -88,7 +88,7 @@
 }
 
 .leer {
-  color: #fff;
+  color: var(--color-on-brand);
   font-weight: 700;
   text-decoration: none;
   font-size: 16px;
@@ -101,7 +101,7 @@
 
 .verMas a {
   font-weight: 700;
-  color: var(--color-pink);
+  color: var(--color-pink-text);
   text-decoration: none;
   font-size: 18px;
 }

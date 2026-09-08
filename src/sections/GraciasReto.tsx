@@ -1,13 +1,28 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { PlayCircle, CheckCircle2, X } from 'lucide-react';
 import { VIDEOS_RETO_VUELVO_A_MOVERME } from '../data';
 import { useReveal } from '../hooks/useReveal';
 import styles from './GraciasReto.module.css';
 
 export default function GraciasReto() {
+  const dialogRef = useRef<HTMLDialogElement>(null);
   const ref = useReveal<HTMLDivElement>();
   const [completados, setCompletados] = useState<Set<number>>(new Set());
   const [videoAbierto, setVideoAbierto] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!videoAbierto) return;
+    const trigger = document.activeElement as HTMLElement | null;
+    const dialog = dialogRef.current;
+    dialog?.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      dialog?.close();
+      document.body.style.overflow = previousOverflow;
+      trigger?.focus();
+    };
+  }, [videoAbierto]);
 
   const toggleCompletado = (dia: number) => {
     setCompletados((prev) => {
@@ -42,6 +57,7 @@ export default function GraciasReto() {
               <div key={video.dia} className={`${styles.card} ${hecho ? styles.cardHecho : ''}`}>
                 <button
                   className={styles.check}
+                  aria-pressed={hecho}
                   onClick={() => toggleCompletado(video.dia)}
                   aria-label={hecho ? `Marcar día ${video.dia} como pendiente` : `Marcar día ${video.dia} como completado`}
                 >
@@ -77,10 +93,12 @@ export default function GraciasReto() {
       </div>
 
       {videoAbierto && (
-        <div
+        <dialog
+          ref={dialogRef}
+          aria-label="Rutina de La Nani Fitness"
+          onCancel={() => setVideoAbierto(null)}
           className={styles.modalFondo}
           onClick={() => setVideoAbierto(null)}
-          role="presentation"
         >
           <div className={styles.modalContenido} onClick={(e) => e.stopPropagation()}>
             <button
@@ -99,7 +117,7 @@ export default function GraciasReto() {
               />
             </div>
           </div>
-        </div>
+        </dialog>
       )}
     </section>
   );

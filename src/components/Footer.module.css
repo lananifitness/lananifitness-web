@@ -1,6 +1,6 @@
 .footer {
   background: var(--gradient-brand);
-  color: #fff;
+  color: var(--color-on-brand);
   padding-top: var(--space-5);
   margin-top: var(--space-6);
 }
@@ -34,14 +34,14 @@
 
 .frase {
   font-size: 17px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-on-brand);
   max-width: 32ch;
 }
 
 .colTitle {
   font-family: var(--font-display);
   font-weight: 700;
-  color: #fff;
+  color: var(--color-on-brand);
   margin-bottom: var(--space-2);
   font-size: 18px;
 }
@@ -53,13 +53,13 @@
 }
 
 .col a {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-on-brand);
   text-decoration: none;
   font-size: 16px;
 }
 
 .col a:hover {
-  color: #fff;
+  color: var(--color-on-brand);
   text-decoration: underline;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .social a {
-  color: #fff;
+  color: var(--color-on-brand);
   opacity: 0.9;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -83,7 +83,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   padding: var(--space-2) var(--space-3);
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-on-brand);
 }
 
 @media (max-width: 720px) {
@@ -92,3 +92,5 @@
     gap: var(--space-3);
   }
 }
+
+.social a { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }

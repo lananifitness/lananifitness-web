@@ -24,8 +24,9 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <a className="skip-link" href="#contenido">Saltar al contenido</a>
       <Nav />
-      <main>
+      <main id="contenido" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/retos" element={<RetosPage />} />
