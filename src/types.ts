@@ -45,6 +45,7 @@ export interface Valor {
 }
 
 export interface PostBlog {
+  fuentes?: { titulo: string; url: string }[];
   id: string;
   slug: string;
   titulo: string;

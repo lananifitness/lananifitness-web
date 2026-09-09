@@ -151,6 +151,33 @@ export const FAQS: Faq[] = [
 
 export const BLOG_POSTS: PostBlog[] = [
   {
+  "id": "b7",
+  "slug": "crear-habito-moverte-despues-de-los-60",
+  "titulo": "Cómo crear el hábito de moverte después de los 60, sin agobiarte",
+  "resumen": "Pequeños pasos, un horario que encaje contigo y menos exigencia: ideas para hacer del movimiento una parte de tu día.",
+  "categoria": "Hábitos y bienestar",
+  "fecha": "2026-09-09",
+  "minutosLectura": 3,
+  "imagen": "/og-cover.jpg",
+  "contenido": [
+    "Quizá te ha pasado: un día decides que vas a hacer ejercicio todas las mañanas y empiezas con mucha ilusión. Después llega una semana complicada, faltas un par de días y piensas que ya lo has estropeado. Pero no has fallado. Tu rutina necesita encajar en tu vida, también cuando las cosas no salen como esperabas.",
+    "No necesitas hacerlo perfecto; empieza con lo que hoy puedes hacer. La Organización Mundial de la Salud recuerda que cualquier cantidad de actividad física cuenta y que hacer algo es mejor que no hacer nada. Un comienzo pequeño puede ser tu punto de partida, sin convertirse en una obligación imposible de mantener.",
+    "Empieza con algo que puedas repetir. En lugar de proponerte una sesión larga desde el primer día, elige un momento breve para caminar o hacer una rutina que ya conozcas y esté adaptada a ti. Por ejemplo, cinco minutos pueden servirte para empezar a organizar el hábito. Es un primer paso, no una meta que tengas que mantener para siempre ni una cantidad suficiente para todas tus necesidades.",
+    "Une el movimiento a algo que ya haces. Puedes reservar un rato después del desayuno o antes de tu programa favorito. Lo importante es que sea un momento posible para ti. Deja preparado lo que necesites y decide de antemano qué vas a hacer: así tendrás una decisión menos cuando llegue la hora.",
+    "Ten una versión sencilla para los días difíciles. Si hoy no te apetece tu rutina habitual, quizá puedas dar un paseo más corto o dedicar unos minutos a movimientos que te resulten cómodos. Y si necesitas descansar, descansa. Escuchar cómo te encuentras también forma parte de cuidarte; no hace falta compensar mañana haciendo el doble.",
+    "Fíjate en avances que tengan sentido para ti. Además de marcar en el calendario los días que te has movido, anota cómo te has sentido. Tal vez hayas disfrutado de salir a pasear, hayas encontrado un horario que te funciona o te haya costado menos empezar. Los cambios en fuerza o autonomía llevan su propio ritmo: no necesitas compararte con nadie.",
+    "Busca compañía si te ayuda. Quedar para caminar, compartir tu propósito con una amiga o seguir una rutina guiada puede hacer que ese rato resulte más agradable. Elige algo que disfrutes y puedas adaptar a tus posibilidades. Si tienes una lesión, síntomas o dudas sobre qué actividad te conviene, consulta con un profesional sanitario antes de probar ejercicios nuevos.",
+    "Prueba esta semana con un plan pequeño: elige una actividad, decide en qué momento la harás y prepara una alternativa más breve. Al terminar la semana, pregúntate qué te ha resultado fácil y qué cambiarías. No se trata de aprobar un examen, sino de descubrir cómo hacerte un hueco.",
+    "Y si un día no lo haces, vuelve en la siguiente oportunidad. Tu esfuerzo no desaparece por una pausa. Vamos paso a paso, con paciencia y cariño: hoy puedes dar un pequeño comienzo a algo que quieras seguir construyendo."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Organización Mundial de la Salud: actividad física",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity"
+    }
+  ]
+},
+  {
     id: 'b1',
     slug: 'fortalecer-piernas-despues-de-los-60',
     titulo: 'Cómo fortalecer las piernas después de los 60 sin lastimarte',

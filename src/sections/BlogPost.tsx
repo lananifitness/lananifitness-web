@@ -80,6 +80,15 @@ export default function BlogPost() {
           {post.contenido.map((parrafo, i) => renderParrafo(parrafo, i))}
         </div>
 
+        {post.fuentes && (
+          <aside style={{ marginTop: 32 }} aria-label="Fuentes del artículo">
+            <h2 style={{ fontSize: 24 }}>Para saber más</h2>
+            <ul>
+              {post.fuentes.map(fuente => <li key={fuente.url}><a href={fuente.url} target="_blank" rel="noopener noreferrer">{fuente.titulo}</a></li>)}
+            </ul>
+          </aside>
+        )}
+
         <div className={`reveal ${styles.volver}`}>
           <Link to="/blog">← Ver más artículos</Link>
         </div>
