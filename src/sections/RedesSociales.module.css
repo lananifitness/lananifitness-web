@@ -73,3 +73,8 @@
 
 .actualizado { font-size: 12px; line-height: 1.4; color: var(--color-ink-soft); text-align: center; max-width: 19ch; margin-top: 8px; }
 @media (max-width: 640px) { .stat { flex: 0 1 calc(50% - 24px); } }
+
+.numero { display: grid; text-align: center; font-variant-numeric: tabular-nums; }
+.numero > span { grid-area: 1 / 1; background: var(--gradient-brand); background-clip: text; -webkit-background-clip: text; }
+.reserva { visibility: hidden; }
+.valor { align-self: center; }

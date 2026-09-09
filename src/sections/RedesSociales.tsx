@@ -1,49 +1,73 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { REDES_SOCIALES } from '../data';
-import { useReveal } from '../hooks/useReveal';
 import styles from './RedesSociales.module.css';
 
-interface Stat { count: number; updatedAt: string; approximate?: boolean }
+function contarHasta(label: string, progress: number): string {
+  if (progress >= 1) return label;
+  const match = label.match(/^(\d+(?:,\d+)?)(.*)$/);
+  if (!match) return label;
+  const decimals = match[1].includes(',') ? 1 : 0;
+  const value = Number(match[1].replace(',', '.')) * progress;
+  return `${value.toFixed(decimals).replace('.', ',')}${match[2]}`;
+}
 
 export default function RedesSociales() {
-  const [stats, setStats] = useState<Record<string, Stat>>({});
+  const ref = useRef<HTMLElement>(null);
+  // Keep the real figures in the initial HTML and for reduced-motion users.
+  const [progress, setProgress] = useState(1);
+
   useEffect(() => {
-    const controller = new AbortController();
-    const refresh = async () => {
-      try {
-        const response = await fetch('/social-stats.json', {cache: 'no-cache', signal: controller.signal});
-        if (!response.ok) return;
-        const data = await response.json();
-        const valid: Record<string, Stat> = {};
-        for (const red of REDES_SOCIALES) {
-          const entry = data?.[red.id];
-          if (entry && Number.isSafeInteger(entry.count) && entry.count >= 0 && typeof entry.updatedAt === 'string' && Number.isFinite(Date.parse(entry.updatedAt)) && Date.parse(entry.updatedAt) <= Date.now() + 60000) valid[red.id] = entry;
-        }
-        setStats(previous => ({...previous, ...valid}));
-      } catch { /* Keep the last displayed values on a temporary network failure. */ }
+    const section = ref.current;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (!section || !('IntersectionObserver' in window) || motion.matches) return;
+    let frame = 0;
+    let started = false;
+    let start: number | undefined;
+    setProgress(0);
+    const tick = (now: number) => {
+      start ??= now;
+      const elapsed = Math.min((now - start) / 1200, 1);
+      setProgress(1 - Math.pow(1 - elapsed, 3));
+      if (elapsed < 1) frame = requestAnimationFrame(tick);
     };
-    void refresh();
-    const interval = window.setInterval(() => { if (!document.hidden) void refresh(); }, 5 * 60 * 1000);
-    return () => { controller.abort(); window.clearInterval(interval); };
+    const observer = new IntersectionObserver(entries => {
+      if (started || !entries.some(entry => entry.isIntersecting)) return;
+      started = true;
+      observer.disconnect();
+      frame = requestAnimationFrame(tick);
+    }, { threshold: 0.2 });
+    observer.observe(section);
+    const finish = () => {
+      if (!motion.matches) return;
+      observer.disconnect();
+      cancelAnimationFrame(frame);
+      setProgress(1);
+    };
+    motion.addEventListener('change', finish);
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(frame);
+      motion.removeEventListener('change', finish);
+    };
   }, []);
-  const ref = useReveal<HTMLDivElement>();
 
   return (
     <section className={styles.section} ref={ref}>
       <div className={`container ${styles.row}`}>
-        {REDES_SOCIALES.map((red) => (
+        {REDES_SOCIALES.map(red => (
           <a
             key={red.id}
             href={red.link}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.stat}
+            aria-label={`${red.nombre}: ${red.seguidores} ${red.id === 'youtube' ? 'suscriptores' : 'seguidores'}`}
           >
-            <span className={styles.numero}>{stats[red.id] ? `${stats[red.id].approximate ? '≈ ' : ''}${new Intl.NumberFormat('es-ES', {notation: 'compact', maximumFractionDigits: 1}).format(stats[red.id].count)}` : red.seguidores}</span>
-            <span className={styles.nombre}>{red.nombre}</span>
-            <span className={styles.actualizado}>
-              {stats[red.id] ? <>Última consulta: <time dateTime={stats[red.id].updatedAt}>{new Date(stats[red.id].updatedAt).toLocaleString('es-ES', {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'})}</time></> : 'Cifra de referencia'}
+            <span className={styles.numero} aria-hidden="true">
+              <span className={styles.reserva}>{red.seguidores}</span>
+              <span className={styles.valor}>{contarHasta(red.seguidores, progress)}</span>
             </span>
+            <span className={styles.nombre}>{red.nombre}</span>
           </a>
         ))}
       </div>
