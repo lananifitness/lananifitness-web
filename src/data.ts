@@ -151,6 +151,34 @@ export const FAQS: Faq[] = [
 
 export const BLOG_POSTS: PostBlog[] = [
   {
+    "id": "b8",
+    "slug": "progreso-mas-alla-de-la-bascula-despues-de-los-60",
+    "titulo": "Tu progreso no se mide solo en la báscula: pequeños logros después de los 60",
+    "resumen": "Disfrutar de un paseo, moverte con más confianza o encontrar tu ritmo también cuenta. Aprende a reconocer los avances de tu día a día.",
+    "categoria": "Bienestar y motivación",
+    "fecha": "2026-09-27",
+    "minutosLectura": 3,
+    "imagen": "/og-cover.jpg",
+    "contenido": [
+      "¿Alguna vez has terminado una semana en la que te has movido, te has dedicado tiempo y has disfrutado de tus rutinas, pero al mirar la báscula has sentido que no habías avanzado? Ese número puede ocupar tanto espacio en nuestra cabeza que nos hace pasar por alto otras cosas que también importan.",
+      "Quiero proponerte una mirada más amable: prestar atención a cómo vives tu día. No todo avance se ve en el espejo; algunos se sienten en tu día a día. Disfrutar de un paseo, animarte a participar en una actividad o encontrar una forma de moverte que te guste también merece reconocimiento.",
+      "El movimiento tiene beneficios que van más allá del peso. La Organización Mundial de la Salud recoge beneficios de la actividad física para el bienestar, el sueño y la salud física y mental de las personas mayores. Eso no significa que todas notemos los mismos cambios ni al mismo tiempo. Tu punto de partida, tu salud y tus circunstancias también cuentan.",
+      "Piensa en las cosas que te gustaría hacer con más comodidad. Quizá sea recorrer el parque, levantarte de tu silla habitual o acompañar a tu familia en una salida. Si con el tiempo alguna de esas actividades te resulta más llevadera, puedes anotarlo como un avance personal. No necesitas convertirlo en una competición ni probar tus límites para demostrar nada.",
+      "La confianza también merece un espacio. Puede que todavía necesites el mismo apoyo para caminar, pero ahora te resulte más fácil pedir compañía para salir. O que hayas encontrado una rutina adaptada con la que te sientes a gusto. Reconocer ese paso no exige dejar de usar apoyos ni hacer movimientos que te den inseguridad.",
+      "Otro logro es hacerte un hueco sin castigarte. Haber retomado el movimiento después de una pausa, haber aprendido a adaptar una sesión o haber respetado un día de descanso son decisiones que puedes valorar. La constancia no necesita una semana perfecta para existir.",
+      "Prueba a llevar un pequeño cuaderno durante unas semanas. Elige dos o tres cosas que tengan sentido para ti y apunta ejemplos concretos: «Hoy disfruté del paseo con mi amiga», «Encontré un horario cómodo» o «Terminé la rutina adaptada sin sentir que tenía que seguir el ritmo de otra persona». Son ejemplos para inspirarte, no resultados que debas conseguir.",
+      "Al revisar tus notas, mira el conjunto. Habrá días con más energía y otros con menos. Una tarde difícil no borra lo que has construido, y una buena mañana tampoco te obliga a hacer más al día siguiente. Si aún no notas cambios, tus esfuerzos siguen mereciendo respeto; puedes revisar tus objetivos y buscar acompañamiento para adaptarlos.",
+      "La báscula puede ser una herramienta cuando tiene un propósito dentro de tu seguimiento de salud. Si un profesional te ha indicado controlar tu peso, mantén ese seguimiento. La idea es que ese dato no sea tu única forma de valorar cómo te cuidas ni de decidir si tu esfuerzo merece la pena.",
+      "Esta semana, antes de preguntarte cuánto has cambiado por fuera, prueba con otra pregunta: «¿Qué momento de mi día he disfrutado más gracias a dedicarme un poco de atención?». Puede ser algo pequeño. Aquí también celebramos esos logros: a tu ritmo, con cariño y sin compararte con nadie."
+    ],
+    "fuentes": [
+      {
+        "titulo": "Organización Mundial de la Salud: actividad física",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity"
+      }
+    ]
+  },
+  {
   "id": "b7",
   "slug": "crear-habito-moverte-despues-de-los-60",
   "titulo": "Cómo crear el hábito de moverte después de los 60, sin agobiarte",
